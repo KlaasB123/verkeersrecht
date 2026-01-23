@@ -21,11 +21,11 @@ export const Header = () => {
       <div className="bg-gradient-hero text-primary-foreground py-2">
         <div className="container mx-auto px-4 flex flex-wrap justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+3211371511" className="flex items-center gap-2 hover:text-gold transition-colors">
+            <a href="tel:+3211371511" className="flex items-center gap-2 hover:text-lime transition-colors">
               <Phone className="w-4 h-4" />
               <span>+32(0) 11 37 15 11</span>
             </a>
-            <a href="mailto:erwin@verkeersrecht.info" className="hidden sm:flex items-center gap-2 hover:text-gold transition-colors">
+            <a href="mailto:erwin@verkeersrecht.info" className="hidden sm:flex items-center gap-2 hover:text-lime transition-colors">
               <Mail className="w-4 h-4" />
               <span>erwin@verkeersrecht.info</span>
             </a>
@@ -34,7 +34,7 @@ export const Header = () => {
             href="https://www.facebook.com/verkeersrecht" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="hover:text-gold transition-colors"
+            className="hover:text-lime transition-colors"
           >
             Een vraag stellen?
           </a>
@@ -46,7 +46,7 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <a href="#" className="flex flex-col">
             <span className="text-2xl font-bold text-primary tracking-tight">verkeersrecht</span>
-            <span className="text-gold text-sm font-medium">.info</span>
+            <span className="text-lime text-sm font-medium">.info</span>
           </a>
 
           {/* Desktop navigation */}
@@ -64,8 +64,8 @@ export const Header = () => {
           </ul>
 
           <div className="hidden lg:block">
-            <Button className="bg-gradient-gold hover:opacity-90 text-foreground font-semibold shadow-lg">
-              Dagvaarding Doorsturen
+            <Button className="bg-gradient-lime hover:opacity-90 text-foreground font-semibold shadow-lg">
+              DAGVAARDING DOORSTUREN
             </Button>
           </div>
 
@@ -95,8 +95,8 @@ export const Header = () => {
                 </li>
               ))}
             </ul>
-            <Button className="w-full mt-4 bg-gradient-gold hover:opacity-90 text-foreground font-semibold">
-              Dagvaarding Doorsturen
+            <Button className="w-full mt-4 bg-gradient-lime hover:opacity-90 text-foreground font-semibold">
+              DAGVAARDING DOORSTUREN
             </Button>
           </div>
         )}

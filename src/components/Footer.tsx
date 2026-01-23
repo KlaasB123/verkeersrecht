@@ -8,7 +8,7 @@ export const Footer = () => {
           <div>
             <div className="mb-6">
               <span className="text-2xl font-bold tracking-tight">verkeersrecht</span>
-              <span className="text-gold">.info</span>
+              <span className="text-lime">.info</span>
             </div>
             <p className="text-primary-foreground/70 leading-relaxed">
               Uw expert in verkeersrecht. Wij helpen u bij verkeersovertredingen en verkeersongevallen in België.
@@ -18,10 +18,10 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Navigatie</h4>
             <ul className="space-y-3 text-primary-foreground/70">
-              <li><a href="#" className="hover:text-gold transition-colors">Home</a></li>
-              <li><a href="#over-ons" className="hover:text-gold transition-colors">Over Ons</a></li>
-              <li><a href="#vragen" className="hover:text-gold transition-colors">Vragen & Advies</a></li>
-              <li><a href="#form" className="hover:text-gold transition-colors">Dagvaarding Doorsturen</a></li>
+              <li><a href="#" className="hover:text-lime transition-colors">Home</a></li>
+              <li><a href="#over-ons" className="hover:text-lime transition-colors">Over ons</a></li>
+              <li><a href="#vragen" className="hover:text-lime transition-colors">Vragen & advies</a></li>
+              <li><a href="#form" className="hover:text-lime transition-colors">Dagvaarding doorsturen</a></li>
             </ul>
           </div>
 
@@ -29,7 +29,7 @@ export const Footer = () => {
             <h4 className="font-semibold text-lg mb-4">Contact</h4>
             <ul className="space-y-3 text-primary-foreground/70">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-lime flex-shrink-0 mt-0.5" />
                 <span>
                   Residentie Refuga<br />
                   Meldertstraat 13 bus 0.03<br />
@@ -37,14 +37,14 @@ export const Footer = () => {
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="tel:+3211371511" className="hover:text-gold transition-colors">
+                <Phone className="w-5 h-5 text-lime flex-shrink-0" />
+                <a href="tel:+3211371511" className="hover:text-lime transition-colors">
                   +32(0) 11 37 15 11
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="mailto:erwin@verkeersrecht.info" className="hover:text-gold transition-colors">
+                <Mail className="w-5 h-5 text-lime flex-shrink-0" />
+                <a href="mailto:erwin@verkeersrecht.info" className="hover:text-lime transition-colors">
                   erwin@verkeersrecht.info
                 </a>
               </li>
