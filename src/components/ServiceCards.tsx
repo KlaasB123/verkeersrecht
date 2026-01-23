@@ -40,7 +40,7 @@ export const ServiceCards = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Hoe Kunnen Wij U Helpen?
+            HOE KUNNEN WIJ U HELPEN?
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Welk probleem u ook heeft, door onze bijstand zal u zich geholpen en ondersteund voelen.
@@ -55,10 +55,10 @@ export const ServiceCards = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6">
-                <div className="w-14 h-14 rounded-xl bg-gradient-gold flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 rounded-xl bg-gradient-lime flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-7 h-7 text-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-navy transition-colors">
+                <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-charcoal transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
