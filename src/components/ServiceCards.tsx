@@ -1,36 +1,43 @@
 import { FileWarning, FileText, Car, Shield, Wine, UserCheck } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     icon: FileWarning,
     title: "Gedagvaard?",
     description: "Ontvangen u een dagvaarding voor de politierechtbank? Wij staan u bij.",
+    href: "/gedagvaard",
   },
   {
     icon: FileText,
     title: "Een PV ontvangen?",
     description: "Geconfronteerd met een proces-verbaal? Laat ons u adviseren over uw opties.",
+    href: "/pv-ontvangen",
   },
   {
     icon: Car,
     title: "Een ongeval gehad?",
     description: "Betrokken bij een verkeersongeval? Wij helpen u uw schade te verhalen.",
+    href: "/ongeval-gehad",
   },
   {
     icon: Shield,
     title: "Vraag over verzekering?",
     description: "Vragen over uw autoverzekering of dekking? Wij geven u helder advies.",
+    href: "/verzekering",
   },
   {
     icon: Wine,
     title: "Teveel gedronken?",
     description: "Betrapt op rijden onder invloed? Wij kennen de wetgeving en verdedigen u.",
+    href: "/teveel-gedronken",
   },
   {
     icon: UserCheck,
     title: "Gratis advocaat",
     description: "Komt u in aanmerking voor gratis rechtsbijstand? Wij informeren u.",
+    href: "/gratis-advocaat",
   },
 ];
 
@@ -49,23 +56,24 @@ export const ServiceCards = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card 
-              key={service.title} 
-              className="group cursor-pointer card-hover border-border bg-card"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CardContent className="p-6">
-                <div className="w-14 h-14 rounded-xl bg-gradient-lime flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-7 h-7 text-foreground" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-charcoal transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-              </CardContent>
-            </Card>
+            <Link to={service.href} key={service.title}>
+              <Card 
+                className="group cursor-pointer card-hover border-border bg-card h-full"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-lime flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-7 h-7 text-foreground" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-charcoal transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>

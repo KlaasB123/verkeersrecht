@@ -31,9 +31,11 @@ export const Hero = () => {
               DAGVAARDING DOORSTUREN
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-lg px-8 py-6">
-              CONTACTEER ONS NU
-            </Button>
+            <a href="#contact">
+              <Button size="lg" variant="outline" className="border-2 border-lime text-lime hover:bg-lime/10 font-semibold text-lg px-8 py-6">
+                CONTACTEER ONS NU
+              </Button>
+            </a>
           </div>
 
           {/* Trust indicators */}
