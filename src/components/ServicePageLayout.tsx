@@ -30,20 +30,20 @@ export const ServicePageLayout = ({ title, icon: Icon, children, subLinks }: Ser
             <span>terug</span>
           </Link>
 
-          <div className="grid lg:grid-cols-4 gap-8">
-            {/* Sidebar with sub-links */}
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Sidebar with sub-links - LEFT SIDE */}
             {subLinks && subLinks.length > 0 && (
-              <aside className="lg:col-span-1">
-                <nav className="bg-card rounded-xl p-4 border border-border">
+              <aside className="lg:w-72 flex-shrink-0 order-first">
+                <nav className="bg-card rounded-xl p-4 border border-border sticky top-32">
                   <ul className="space-y-1">
                     {subLinks.map((link) => (
                       <li key={link.label}>
-                        <a 
-                          href={link.href}
+                        <Link 
+                          to={link.href}
                           className="block px-3 py-2 text-sm text-muted-foreground hover:text-charcoal hover:bg-secondary rounded-lg transition-colors"
                         >
                           {link.label}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -52,7 +52,7 @@ export const ServicePageLayout = ({ title, icon: Icon, children, subLinks }: Ser
             )}
 
             {/* Main content */}
-            <article className={subLinks && subLinks.length > 0 ? "lg:col-span-3" : "lg:col-span-4 max-w-3xl"}>
+            <article className="flex-1 max-w-3xl">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-14 h-14 rounded-xl bg-gradient-lime flex items-center justify-center">
                   <Icon className="w-7 h-7 text-foreground" />
