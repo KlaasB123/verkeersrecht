@@ -2,10 +2,10 @@ import { Wine } from "lucide-react";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 
 const subLinks = [
-  { label: "RIJBEWIJS INGETROKKEN", href: "#rijbewijs-ingetrokken" },
-  { label: "RIJVERBOD EN INLEVERING RIJBEWIJS", href: "#rijverbod" },
-  { label: "MEDISCHE EN/OF PSYCHOLOGISCHE PROEVEN", href: "#proeven" },
-  { label: "PRAKTISCHE EN THEORETISCHE HERSTELEXAMENS", href: "#herstelexamens" },
+  { label: "RIJBEWIJS INGETROKKEN", href: "/teveel-gedronken/rijbewijs-ingetrokken" },
+  { label: "RIJVERBOD EN INLEVERING RIJBEWIJS", href: "/teveel-gedronken/rijverbod-en-inlevering-rijbewijs" },
+  { label: "MEDISCHE EN/OF PSYCHOLOGISCHE PROEVEN", href: "/teveel-gedronken/medische-psychologische-proeven" },
+  { label: "PRAKTISCHE EN THEORETISCHE HERSTELEXAMENS", href: "/teveel-gedronken/herstelexamens" },
 ];
 
 const TeveelGedronken = () => {

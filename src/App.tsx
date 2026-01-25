@@ -10,6 +10,8 @@ import OngevalGehad from "./pages/OngevalGehad";
 import Verzekering from "./pages/Verzekering";
 import TeveelGedronken from "./pages/TeveelGedronken";
 import GratisAdvocaat from "./pages/GratisAdvocaat";
+import VragenAdvies from "./pages/VragenAdvies";
+import AZIndex from "./pages/AZIndex";
 import NotFound from "./pages/NotFound";
 
 // Gedagvaard sub-pages
@@ -88,6 +90,10 @@ const App = () => (
           <Route path="/teveel-gedronken/rijverbod-en-inlevering-rijbewijs" element={<TeveelRijverbod />} />
           <Route path="/teveel-gedronken/medische-psychologische-proeven" element={<MedischePsychologischeProeven />} />
           <Route path="/teveel-gedronken/herstelexamens" element={<Herstelexamens />} />
+          {/* Vragen & Advies and A-Z */}
+          <Route path="/vragen-advies" element={<VragenAdvies />} />
+          <Route path="/a-z" element={<AZIndex />} />
+          <Route path="/a-z/:term" element={<AZIndex />} />
           {/* Other */}
           <Route path="/gratis-advocaat" element={<GratisAdvocaat />} />
           <Route path="*" element={<NotFound />} />

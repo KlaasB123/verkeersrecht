@@ -1,19 +1,28 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { label: "Home", href: "#" },
-  { label: "Over Ons", href: "#over-ons" },
-  { label: "Vragen & Advies", href: "#vragen" },
-  { label: "A-Z", href: "#az" },
-  { label: "Actueel", href: "#actueel" },
-  { label: "Links", href: "#links" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Over Ons", href: "/#over-ons" },
+  { label: "Vragen & Advies", href: "/vragen-advies" },
+  { label: "A-Z", href: "/a-z" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollToForm = () => {
+    const formElement = document.getElementById('form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = '/#form';
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
@@ -44,27 +53,39 @@ export const Header = () => {
       {/* Main navigation */}
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex flex-col">
+          <Link to="/" className="flex flex-col">
             <span className="text-2xl font-bold text-primary tracking-tight">verkeersrecht</span>
             <span className="text-lime text-sm font-medium">.info</span>
-          </a>
+          </Link>
 
           {/* Desktop navigation */}
           <ul className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
               <li key={item.label}>
-                <a
-                  href={item.href}
-                  className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors rounded-lg hover:bg-secondary"
-                >
-                  {item.label}
-                </a>
+                {item.href.startsWith('/') && !item.href.includes('#') ? (
+                  <Link
+                    to={item.href}
+                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors rounded-lg hover:bg-secondary"
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    href={item.href}
+                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors rounded-lg hover:bg-secondary"
+                  >
+                    {item.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
 
           <div className="hidden lg:block">
-            <Button className="bg-gradient-lime hover:opacity-90 text-foreground font-semibold shadow-lg">
+            <Button 
+              onClick={scrollToForm}
+              className="bg-gradient-lime hover:opacity-90 text-foreground font-semibold shadow-lg"
+            >
               DAGVAARDING DOORSTUREN
             </Button>
           </div>
@@ -85,17 +106,30 @@ export const Header = () => {
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.label}>
-                  <a
-                    href={item.href}
-                    className="block px-4 py-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.label}
-                  </a>
+                  {item.href.startsWith('/') && !item.href.includes('#') ? (
+                    <Link
+                      to={item.href}
+                      className="block px-4 py-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={item.href}
+                      className="block px-4 py-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
-            <Button className="w-full mt-4 bg-gradient-lime hover:opacity-90 text-foreground font-semibold">
+            <Button 
+              onClick={scrollToForm}
+              className="w-full mt-4 bg-gradient-lime hover:opacity-90 text-foreground font-semibold"
+            >
               DAGVAARDING DOORSTUREN
             </Button>
           </div>
