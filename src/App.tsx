@@ -20,7 +20,30 @@ import Vrijspraak from "./pages/gedagvaard/Vrijspraak";
 import VerzachtendeOmstandigheden from "./pages/gedagvaard/VerzachtendeOmstandigheden";
 import VonnisBeroep from "./pages/gedagvaard/VonnisBeroep";
 import Gerechtskosten from "./pages/gedagvaard/Gerechtskosten";
-import RijverbodInleveringRijbewijs from "./pages/gedagvaard/RijverbodInleveringRijbewijs";
+import GedagvaardRijverbod from "./pages/gedagvaard/RijverbodInleveringRijbewijs";
+
+// PV Ontvangen sub-pages
+import OnmiddellijkeInning from "./pages/pv-ontvangen/OnmiddellijkeInning";
+import BevelTotBetalen from "./pages/pv-ontvangen/BevelTotBetalen";
+import PvRijbewijsIngetrokken from "./pages/pv-ontvangen/RijbewijsIngetrokken";
+import Geldboete from "./pages/pv-ontvangen/Geldboete";
+
+// Ongeval gehad sub-pages
+import InzittendenBestuurder from "./pages/ongeval-gehad/InzittendenBestuurder";
+import BurgerlijkePartij from "./pages/ongeval-gehad/BurgerlijkePartij";
+import Gekwetst from "./pages/ongeval-gehad/Gekwetst";
+import Raadsgeneesheer from "./pages/ongeval-gehad/Raadsgeneesheer";
+import MinnelijkeMedischeExpertise from "./pages/ongeval-gehad/MinnelijkeMedischeExpertise";
+
+// Verzekering sub-pages
+import Terugvordering from "./pages/verzekering/Terugvordering";
+import Omniumverzekering from "./pages/verzekering/Omniumverzekering";
+
+// Teveel gedronken sub-pages
+import TeveelRijbewijsIngetrokken from "./pages/teveel-gedronken/RijbewijsIngetrokken";
+import TeveelRijverbod from "./pages/teveel-gedronken/RijverbodInleveringRijbewijs";
+import MedischePsychologischeProeven from "./pages/teveel-gedronken/MedischePsychologischeProeven";
+import Herstelexamens from "./pages/teveel-gedronken/Herstelexamens";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +55,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          {/* Gedagvaard */}
           <Route path="/gedagvaard" element={<Gedagvaard />} />
           <Route path="/gedagvaard/voor-welke-rechtbank" element={<VoorWelkeRechtbank />} />
           <Route path="/gedagvaard/verloop-van-de-zitting" element={<VerloopZitting />} />
@@ -40,13 +64,32 @@ const App = () => (
           <Route path="/gedagvaard/verzachtende-omstandigheden" element={<VerzachtendeOmstandigheden />} />
           <Route path="/gedagvaard/vonnis-beroep" element={<VonnisBeroep />} />
           <Route path="/gedagvaard/gerechtskosten" element={<Gerechtskosten />} />
-          <Route path="/gedagvaard/rijverbod-en-inlevering-rijbewijs" element={<RijverbodInleveringRijbewijs />} />
+          <Route path="/gedagvaard/rijverbod-en-inlevering-rijbewijs" element={<GedagvaardRijverbod />} />
+          {/* PV Ontvangen */}
           <Route path="/pv-ontvangen" element={<PvOntvangen />} />
+          <Route path="/pv-ontvangen/onmiddellijke-inning" element={<OnmiddellijkeInning />} />
+          <Route path="/pv-ontvangen/bevel-tot-betalen" element={<BevelTotBetalen />} />
+          <Route path="/pv-ontvangen/rijbewijs-ingetrokken" element={<PvRijbewijsIngetrokken />} />
+          <Route path="/pv-ontvangen/geldboete" element={<Geldboete />} />
+          {/* Ongeval gehad */}
           <Route path="/ongeval-gehad" element={<OngevalGehad />} />
+          <Route path="/ongeval-gehad/inzittenden-bestuurder" element={<InzittendenBestuurder />} />
+          <Route path="/ongeval-gehad/burgerlijke-partij" element={<BurgerlijkePartij />} />
+          <Route path="/ongeval-gehad/gekwetst" element={<Gekwetst />} />
+          <Route path="/ongeval-gehad/raadsgeneesheer" element={<Raadsgeneesheer />} />
+          <Route path="/ongeval-gehad/minnelijke-medische-expertise" element={<MinnelijkeMedischeExpertise />} />
+          {/* Verzekering */}
           <Route path="/verzekering" element={<Verzekering />} />
+          <Route path="/verzekering/terugvordering" element={<Terugvordering />} />
+          <Route path="/verzekering/omniumverzekering" element={<Omniumverzekering />} />
+          {/* Teveel gedronken */}
           <Route path="/teveel-gedronken" element={<TeveelGedronken />} />
+          <Route path="/teveel-gedronken/rijbewijs-ingetrokken" element={<TeveelRijbewijsIngetrokken />} />
+          <Route path="/teveel-gedronken/rijverbod-en-inlevering-rijbewijs" element={<TeveelRijverbod />} />
+          <Route path="/teveel-gedronken/medische-psychologische-proeven" element={<MedischePsychologischeProeven />} />
+          <Route path="/teveel-gedronken/herstelexamens" element={<Herstelexamens />} />
+          {/* Other */}
           <Route path="/gratis-advocaat" element={<GratisAdvocaat />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

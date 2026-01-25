@@ -2,11 +2,11 @@ import { Car } from "lucide-react";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 
 const subLinks = [
-  { label: "INZITTENDEN - BESTUURDER", href: "#inzittenden-bestuurder" },
-  { label: "BURGERLIJKE PARTIJ", href: "#burgerlijke-partij" },
-  { label: "GEKWETST", href: "#gekwetst" },
-  { label: "RAADSGENEESHEER", href: "#raadsgeneesheer" },
-  { label: "MINNELIJKE MEDISCHE EXPERTISE OF MME", href: "#mme" },
+  { label: "INZITTENDEN - BESTUURDER", href: "/ongeval-gehad/inzittenden-bestuurder" },
+  { label: "BURGERLIJKE PARTIJ", href: "/ongeval-gehad/burgerlijke-partij" },
+  { label: "GEKWETST", href: "/ongeval-gehad/gekwetst" },
+  { label: "RAADSGENEESHEER", href: "/ongeval-gehad/raadsgeneesheer" },
+  { label: "MINNELIJKE MEDISCHE EXPERTISE OF MME", href: "/ongeval-gehad/minnelijke-medische-expertise" },
 ];
 
 const OngevalGehad = () => {
