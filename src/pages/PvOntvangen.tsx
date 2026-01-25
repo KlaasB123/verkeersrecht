@@ -2,10 +2,10 @@ import { FileText } from "lucide-react";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 
 const subLinks = [
-  { label: "ONMIDDELLIJKE INNING", href: "#onmiddellijke-inning" },
-  { label: "BEVEL TOT BETALEN", href: "#bevel-tot-betalen" },
-  { label: "RIJBEWIJS INGETROKKEN", href: "#rijbewijs-ingetrokken" },
-  { label: "GELDBOETE", href: "#geldboete" },
+  { label: "ONMIDDELLIJKE INNING", href: "/pv-ontvangen/onmiddellijke-inning" },
+  { label: "BEVEL TOT BETALEN", href: "/pv-ontvangen/bevel-tot-betalen" },
+  { label: "RIJBEWIJS INGETROKKEN", href: "/pv-ontvangen/rijbewijs-ingetrokken" },
+  { label: "GELDBOETE", href: "/pv-ontvangen/geldboete" },
 ];
 
 const PvOntvangen = () => {

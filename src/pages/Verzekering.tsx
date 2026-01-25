@@ -2,8 +2,8 @@ import { Shield } from "lucide-react";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 
 const subLinks = [
-  { label: "TERUGVORDERING DOOR DE VERZEKERING - VERHAAL - REGRES", href: "#terugvordering" },
-  { label: "OMNIUMVERZEKERING", href: "#omniumverzekering" },
+  { label: "TERUGVORDERING DOOR DE VERZEKERING", href: "/verzekering/terugvordering" },
+  { label: "OMNIUMVERZEKERING", href: "/verzekering/omniumverzekering" },
 ];
 
 const Verzekering = () => {
