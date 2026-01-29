@@ -12,6 +12,7 @@ import TeveelGedronken from "./pages/TeveelGedronken";
 import GratisAdvocaat from "./pages/GratisAdvocaat";
 import VragenAdvies from "./pages/VragenAdvies";
 import AZIndex from "./pages/AZIndex";
+import AZTermDetail from "./pages/AZTermDetail";
 import NotFound from "./pages/NotFound";
 
 // Gedagvaard sub-pages
@@ -93,7 +94,7 @@ const App = () => (
           {/* Vragen & Advies and A-Z */}
           <Route path="/vragen-advies" element={<VragenAdvies />} />
           <Route path="/a-z" element={<AZIndex />} />
-          <Route path="/a-z/:term" element={<AZIndex />} />
+          <Route path="/a-z/:term" element={<AZTermDetail />} />
           {/* Other */}
           <Route path="/gratis-advocaat" element={<GratisAdvocaat />} />
           <Route path="*" element={<NotFound />} />
