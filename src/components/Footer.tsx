@@ -1,15 +1,27 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Footer = () => {
+  const navigate = useNavigate();
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/', { state: { scrollTo: sectionId } });
+    }
+  };
+
   return (
     <footer className="bg-gradient-hero text-primary-foreground" id="contact">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-12">
           <div>
-            <div className="mb-6">
+            <Link to="/" className="mb-6 inline-block">
               <span className="text-2xl font-bold tracking-tight">verkeersrecht</span>
               <span className="text-lime">.info</span>
-            </div>
+            </Link>
             <p className="text-primary-foreground/70 leading-relaxed">
               Uw expert in verkeersrecht. Wij helpen u bij verkeersovertredingen en verkeersongevallen in België.
             </p>
@@ -18,10 +30,24 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Navigatie</h4>
             <ul className="space-y-3 text-primary-foreground/70">
-              <li><a href="#" className="hover:text-lime transition-colors">Home</a></li>
-              <li><a href="#over-ons" className="hover:text-lime transition-colors">Over ons</a></li>
-              <li><a href="#vragen" className="hover:text-lime transition-colors">Vragen & advies</a></li>
-              <li><a href="#form" className="hover:text-lime transition-colors">Dagvaarding doorsturen</a></li>
+              <li><Link to="/" className="hover:text-lime transition-colors">Home</Link></li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('over-ons')} 
+                  className="hover:text-lime transition-colors"
+                >
+                  Over ons
+                </button>
+              </li>
+              <li><Link to="/vragen-advies" className="hover:text-lime transition-colors">Vragen & advies</Link></li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('form')} 
+                  className="hover:text-lime transition-colors"
+                >
+                  Dagvaarding doorsturen
+                </button>
+              </li>
             </ul>
           </div>
 
