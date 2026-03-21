@@ -40,11 +40,11 @@ export const Header = () => {
       <div className="bg-gradient-hero text-primary-foreground py-2">
         <div className="container mx-auto px-4 flex flex-wrap justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+3211371511" className="flex items-center gap-2 hover:text-lime transition-colors">
+            <a href="tel:+3211371511" className="flex items-center gap-2 hover:text-amber transition-colors">
               <Phone className="w-4 h-4" />
               <span>+32(0) 11 37 15 11</span>
             </a>
-            <a href="mailto:erwin@verkeersrecht.info" className="hidden sm:flex items-center gap-2 hover:text-lime transition-colors">
+            <a href="mailto:erwin@verkeersrecht.info" className="hidden sm:flex items-center gap-2 hover:text-amber transition-colors">
               <Mail className="w-4 h-4" />
               <span>erwin@verkeersrecht.info</span>
             </a>
@@ -53,7 +53,7 @@ export const Header = () => {
             href="https://www.facebook.com/verkeersrecht" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="hover:text-lime transition-colors"
+            className="hover:text-amber transition-colors"
           >
             Een vraag stellen?
           </a>
@@ -65,7 +65,7 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex flex-col">
             <span className="text-2xl font-bold text-primary tracking-tight">verkeersrecht</span>
-            <span className="text-lime text-sm font-medium">.info</span>
+            <span className="text-amber text-sm font-medium">.info</span>
           </Link>
 
           {/* Desktop navigation */}
