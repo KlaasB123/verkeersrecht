@@ -33,7 +33,7 @@ const AZIndex = () => {
             href={`#letter-${letter}`}
             className={`w-10 h-10 flex items-center justify-center rounded-lg font-semibold transition-colors ${
               azTerms[letter]?.length > 0
-                ? 'bg-amber/20 text-foreground hover:bg-amber/40'
+                ? 'bg-primary/10 text-foreground hover:bg-primary/20'
                 : 'bg-muted text-muted-foreground'
             }`}
           >
