@@ -20,7 +20,7 @@ export const Footer = () => {
           <div>
             <Link to="/" className="mb-6 inline-block">
               <span className="text-2xl font-bold tracking-tight">verkeersrecht</span>
-              <span className="text-amber">.info</span>
+              <span className="text-primary-foreground/60">.info</span>
             </Link>
             <p className="text-primary-foreground/70 leading-relaxed">
               Uw expert in verkeersrecht. Wij helpen u bij verkeersovertredingen en verkeersongevallen in België.
@@ -30,20 +30,20 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Navigatie</h4>
             <ul className="space-y-3 text-primary-foreground/70">
-              <li><Link to="/" className="hover:text-amber transition-colors">Home</Link></li>
+              <li><Link to="/" className="hover:text-primary-foreground transition-colors">Home</Link></li>
               <li>
                 <button 
                   onClick={() => scrollToSection('over-ons')} 
-                  className="hover:text-amber transition-colors"
+                  className="hover:text-primary-foreground transition-colors"
                 >
                   Over ons
                 </button>
               </li>
-              <li><Link to="/vragen-advies" className="hover:text-amber transition-colors">Vragen & advies</Link></li>
+              <li><Link to="/vragen-advies" className="hover:text-primary-foreground transition-colors">Vragen & advies</Link></li>
               <li>
                 <button 
                   onClick={() => scrollToSection('form')} 
-                  className="hover:text-amber transition-colors"
+                  className="hover:text-primary-foreground transition-colors"
                 >
                   Dagvaarding doorsturen
                 </button>
@@ -55,7 +55,7 @@ export const Footer = () => {
             <h4 className="font-semibold text-lg mb-4">Contact</h4>
             <ul className="space-y-3 text-primary-foreground/70">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-amber flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-primary-foreground/50 flex-shrink-0 mt-0.5" />
                 <span>
                   Residentie Refuga<br />
                   Meldertstraat 13 bus 0.03<br />
@@ -63,14 +63,14 @@ export const Footer = () => {
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-amber flex-shrink-0" />
-                <a href="tel:+3211371511" className="hover:text-amber transition-colors">
+                <Phone className="w-5 h-5 text-primary-foreground/50 flex-shrink-0" />
+                <a href="tel:+3211371511" className="hover:text-primary-foreground transition-colors">
                   +32(0) 11 37 15 11
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-amber flex-shrink-0" />
-                <a href="mailto:erwin@verkeersrecht.info" className="hover:text-amber transition-colors">
+                <Mail className="w-5 h-5 text-primary-foreground/50 flex-shrink-0" />
+                <a href="mailto:erwin@verkeersrecht.info" className="hover:text-primary-foreground transition-colors">
                   erwin@verkeersrecht.info
                 </a>
               </li>

@@ -40,11 +40,11 @@ export const Header = () => {
       <div className="bg-gradient-hero text-primary-foreground py-2">
         <div className="container mx-auto px-4 flex flex-wrap justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+3211371511" className="flex items-center gap-2 hover:text-amber transition-colors">
+            <a href="tel:+3211371511" className="flex items-center gap-2 hover:text-primary-foreground/70 transition-colors">
               <Phone className="w-4 h-4" />
               <span>+32(0) 11 37 15 11</span>
             </a>
-            <a href="mailto:erwin@verkeersrecht.info" className="hidden sm:flex items-center gap-2 hover:text-amber transition-colors">
+            <a href="mailto:erwin@verkeersrecht.info" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/70 transition-colors">
               <Mail className="w-4 h-4" />
               <span>erwin@verkeersrecht.info</span>
             </a>
@@ -53,7 +53,7 @@ export const Header = () => {
             href="https://www.facebook.com/verkeersrecht" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="hover:text-amber transition-colors"
+            className="hover:text-primary-foreground/70 transition-colors"
           >
             Een vraag stellen?
           </a>
@@ -65,7 +65,7 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex flex-col">
             <span className="text-2xl font-bold text-primary tracking-tight">verkeersrecht</span>
-            <span className="text-amber text-sm font-medium">.info</span>
+            <span className="text-navy-light text-sm font-medium">.info</span>
           </Link>
 
           {/* Desktop navigation */}
@@ -101,7 +101,7 @@ export const Header = () => {
           <div className="hidden lg:block">
             <Button 
               onClick={scrollToForm}
-              className="bg-gradient-lime hover:opacity-90 text-foreground font-semibold shadow-lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold shadow-lg"
             >
               DAGVAARDING DOORSTUREN
             </Button>
@@ -152,7 +152,7 @@ export const Header = () => {
             </ul>
             <Button 
               onClick={scrollToForm}
-              className="w-full mt-4 bg-gradient-lime hover:opacity-90 text-foreground font-semibold"
+              className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
             >
               DAGVAARDING DOORSTUREN
             </Button>

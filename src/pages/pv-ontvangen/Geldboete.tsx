@@ -17,14 +17,14 @@ const Geldboete = () => {
 
       <p className="mb-6">
         U kan er een aantal zelf berekenen via{" "}
-        <a href="http://www.wegcode.be/boeteberekening" target="_blank" rel="noopener noreferrer" className="text-amber hover:underline">
+        <a href="http://www.wegcode.be/boeteberekening" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
           http://www.wegcode.be/boeteberekening
         </a>
       </p>
 
       <p className="mb-6">
         Ook vindt u ze op de website{" "}
-        <a href="http://wegcode.be/wetteksten/secties/wetten/verkeerswet/456-t4hs2" target="_blank" rel="noopener noreferrer" className="text-amber hover:underline">
+        <a href="http://wegcode.be/wetteksten/secties/wetten/verkeerswet/456-t4hs2" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
           http://wegcode.be/wetteksten/secties/wetten/verkeerswet/456-t4hs2
         </a>
       </p>

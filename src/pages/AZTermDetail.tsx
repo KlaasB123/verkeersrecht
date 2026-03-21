@@ -57,7 +57,7 @@ const AZTermDetail = () => {
                         to={`/a-z/${t.slug}`}
                         className={`block px-3 py-2 text-sm rounded-lg transition-colors ${
                           t.slug === termData.slug 
-                            ? 'bg-amber/20 text-foreground font-medium' 
+                            ? 'bg-primary/10 text-foreground font-medium' 
                             : 'text-muted-foreground hover:text-navy hover:bg-secondary'
                         }`}
                       >
@@ -72,8 +72,8 @@ const AZTermDetail = () => {
             {/* Main content */}
             <article className="max-w-3xl">
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-14 h-14 rounded-xl bg-gradient-lime flex items-center justify-center">
-                  <BookOpen className="w-7 h-7 text-foreground" />
+                <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center">
+                  <BookOpen className="w-7 h-7 text-primary" />
                 </div>
                 <h1 className="text-3xl md:text-4xl font-bold text-foreground">
                   {termData.term}

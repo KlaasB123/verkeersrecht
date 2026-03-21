@@ -15,7 +15,7 @@ const VragenAdvies = () => {
 
       <p className="mb-8">
         Het gratis antwoord zal gebaseerd zijn op de gegevens die u ons ter beschikking stelt. U dient er echter rekening mee te houden dat het eerste advies kort en bondig zal zijn. Voor verdere informatie kan u per mail contact opnemen via{" "}
-        <a href="mailto:erwin@verkeersrecht.info" className="text-amber hover:underline">
+        <a href="mailto:erwin@verkeersrecht.info" className="text-primary hover:underline">
           erwin@verkeersrecht.info
         </a>.
       </p>
@@ -52,7 +52,7 @@ const VragenAdvies = () => {
             <Button 
               type="submit" 
               size="lg" 
-              className="w-full bg-gradient-lime hover:opacity-90 text-foreground font-semibold"
+              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
             >
               VERSTUREN
               <Send className="ml-2 w-5 h-5" />

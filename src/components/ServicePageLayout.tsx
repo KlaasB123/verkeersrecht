@@ -54,8 +54,8 @@ export const ServicePageLayout = ({ title, icon: Icon, children, subLinks }: Ser
             {/* Main content */}
             <article className={`max-w-3xl ${!subLinks || subLinks.length === 0 ? 'lg:col-span-2' : ''}`}>
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-14 h-14 rounded-xl bg-gradient-lime flex items-center justify-center">
-                  <Icon className="w-7 h-7 text-foreground" />
+                <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center">
+                  <Icon className="w-7 h-7 text-primary" />
                 </div>
                 <h1 className="text-3xl md:text-4xl font-bold text-foreground">
                   {title}
