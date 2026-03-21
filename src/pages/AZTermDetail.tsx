@@ -16,7 +16,7 @@ const AZTermDetail = () => {
           <div className="container mx-auto px-4">
             <Link 
               to="/a-z" 
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-charcoal transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-navy transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>terug naar A-Z</span>
@@ -39,7 +39,7 @@ const AZTermDetail = () => {
         <div className="container mx-auto px-4">
           <Link 
             to="/a-z" 
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-charcoal transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-navy transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>terug naar A-Z</span>
@@ -57,8 +57,8 @@ const AZTermDetail = () => {
                         to={`/a-z/${t.slug}`}
                         className={`block px-3 py-2 text-sm rounded-lg transition-colors ${
                           t.slug === termData.slug 
-                            ? 'bg-lime/20 text-foreground font-medium' 
-                            : 'text-muted-foreground hover:text-charcoal hover:bg-secondary'
+                            ? 'bg-amber/20 text-foreground font-medium' 
+                            : 'text-muted-foreground hover:text-navy hover:bg-secondary'
                         }`}
                       >
                         {t.term}

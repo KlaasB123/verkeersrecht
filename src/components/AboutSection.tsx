@@ -15,7 +15,7 @@ export const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span className="inline-block text-lime font-semibold text-sm uppercase tracking-wider mb-3">
+            <span className="inline-block text-amber font-semibold text-sm uppercase tracking-wider mb-3">
               Over ons
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
@@ -36,7 +36,7 @@ export const AboutSection = () => {
             <div className="grid sm:grid-cols-2 gap-4">
               {features.map((feature) => (
                 <div key={feature} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-lime flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-amber flex-shrink-0" />
                   <span className="text-foreground">{feature}</span>
                 </div>
               ))}
@@ -61,17 +61,17 @@ export const AboutSection = () => {
               
               <div>
                 <p className="text-primary-foreground/70 text-sm mb-1">Telefoon</p>
-                <a href="tel:+3211371511" className="font-medium text-lime hover:underline">
+                <a href="tel:+3211371511" className="font-medium text-amber hover:underline">
                   +32(0) 11 37 15 11
                 </a>
               </div>
               
               <div>
                 <p className="text-primary-foreground/70 text-sm mb-1">E-mail</p>
-                <a href="mailto:erwin@verkeersrecht.info" className="font-medium text-lime hover:underline block">
+                <a href="mailto:erwin@verkeersrecht.info" className="font-medium text-amber hover:underline block">
                   erwin@verkeersrecht.info
                 </a>
-                <a href="mailto:info@govarts.be" className="font-medium text-lime hover:underline block">
+                <a href="mailto:info@govarts.be" className="font-medium text-amber hover:underline block">
                   info@govarts.be
                 </a>
               </div>

@@ -88,7 +88,7 @@ export const SummonForm = () => {
                   </RadioGroup>
 
                   {uploadMethod === "upload" && (
-                    <div className="border-2 border-dashed border-border rounded-xl p-8 text-center hover:border-lime transition-colors cursor-pointer bg-background">
+                    <div className="border-2 border-dashed border-border rounded-xl p-8 text-center hover:border-amber transition-colors cursor-pointer bg-background">
                       <Upload className="w-10 h-10 text-muted-foreground mx-auto mb-3" />
                       <p className="text-muted-foreground mb-2">
                         Sleep uw bestand hierheen of klik om te uploaden
