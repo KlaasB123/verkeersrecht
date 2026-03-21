@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 210 14% 95%;
     --muted-foreground: 215 10% 42%;
 
-    --accent: 38 70% 50%;
+    --accent: 218 40% 32%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
@@ -40,11 +40,10 @@ All colors MUST be HSL.
 
     /* Custom tokens */
     --navy: 218 55% 18%;
-    --navy-light: 218 45% 28%;
+    --navy-light: 218 40% 32%;
     --charcoal: 220 15% 22%;
-    --charcoal-light: 215 10% 35%;
-    --amber: 38 70% 50%;
-    --amber-light: 38 55% 58%;
+    --charcoal-light: 215 10% 40%;
+    --slate: 215 16% 47%;
     --cream: 210 20% 98%;
   }
 }
@@ -58,8 +57,8 @@ All colors MUST be HSL.
     background: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--navy-light)) 100%);
   }
   
-  .bg-gradient-lime {
-    background: linear-gradient(135deg, hsl(var(--amber)) 0%, hsl(var(--amber-light)) 60%);
+  .bg-gradient-cta {
+    background: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--navy-light)) 100%);
   }
   
   .card-hover {

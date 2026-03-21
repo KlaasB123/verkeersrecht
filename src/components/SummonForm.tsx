@@ -15,8 +15,8 @@ export const SummonForm = () => {
         <div className="max-w-3xl mx-auto">
           <Card className="shadow-2xl border-0">
             <CardHeader className="text-center pb-2">
-              <div className="w-16 h-16 bg-gradient-lime rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Send className="w-8 h-8 text-foreground" />
+              <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Send className="w-8 h-8 text-primary-foreground" />
               </div>
               <CardTitle className="text-2xl md:text-3xl font-bold text-foreground">
                 DAGVAARDING DOORSTUREN
@@ -88,7 +88,7 @@ export const SummonForm = () => {
                   </RadioGroup>
 
                   {uploadMethod === "upload" && (
-                    <div className="border-2 border-dashed border-border rounded-xl p-8 text-center hover:border-amber transition-colors cursor-pointer bg-background">
+                    <div className="border-2 border-dashed border-border rounded-xl p-8 text-center hover:border-primary/30 transition-colors cursor-pointer bg-background">
                       <Upload className="w-10 h-10 text-muted-foreground mx-auto mb-3" />
                       <p className="text-muted-foreground mb-2">
                         Sleep uw bestand hierheen of klik om te uploaden
@@ -130,7 +130,7 @@ export const SummonForm = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-gradient-lime hover:opacity-90 text-foreground font-semibold text-lg py-6"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-lg py-6"
                 >
                   DAGVAARDING VERSTUREN
                   <Send className="ml-2 w-5 h-5" />
