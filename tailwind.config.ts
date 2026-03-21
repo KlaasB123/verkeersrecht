@@ -55,10 +55,7 @@ export default {
           DEFAULT: "hsl(var(--charcoal))",
           light: "hsl(var(--charcoal-light))",
         },
-        amber: {
-          DEFAULT: "hsl(var(--amber))",
-          light: "hsl(var(--amber-light))",
-        },
+        slate: "hsl(var(--slate))",
         cream: "hsl(var(--cream))",
       },
       fontFamily: {
