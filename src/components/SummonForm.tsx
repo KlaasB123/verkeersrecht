@@ -103,7 +103,7 @@ export const SummonForm = () => {
                   {uploadMethod === "manual" && (
                     <div className="space-y-4 p-4 bg-background rounded-xl">
                       <p className="text-sm text-muted-foreground">
-                        U kan ook de gegevens faxen via 011/37.15.12 of per post aan ons bezorgen.
+                        U kan de gegevens ook per post aan ons bezorgen.
                       </p>
                       <div className="grid sm:grid-cols-2 gap-4">
                         <div className="space-y-2">

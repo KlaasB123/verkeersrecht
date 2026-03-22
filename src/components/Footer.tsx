@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Linkedin } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
 export const Footer = () => {
@@ -16,7 +16,7 @@ export const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground" id="contact">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-4 gap-12">
           <div>
             <Link to="/" className="mb-6 inline-block">
               <span className="text-2xl font-bold tracking-tight">verkeersrecht</span>
@@ -75,6 +75,33 @@ export const Footer = () => {
                 </a>
               </li>
             </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-lg mb-4">Op de hoogte blijven?</h4>
+            <p className="text-primary-foreground/70 leading-relaxed mb-6">
+              Volg ons op sociale media voor het laatste nieuws over verkeersrecht.
+            </p>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.facebook.com/verkeersrecht"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/advocatenkantoor-govarts"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
 
