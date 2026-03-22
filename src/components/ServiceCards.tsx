@@ -58,8 +58,7 @@ export const ServiceCards = () => {
           {services.map((service, index) => (
             <Link to={service.href} key={service.title}>
               <Card 
-                className="group cursor-pointer card-hover border-border bg-card h-full"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group cursor-pointer border-border bg-card h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
               >
                 <CardContent className="p-6">
                   <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">

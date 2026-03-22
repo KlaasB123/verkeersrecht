@@ -43,7 +43,7 @@ export const AboutSection = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-hero rounded-2xl p-8 text-primary-foreground">
+          <div className="bg-primary rounded-2xl p-8 text-primary-foreground">
             <h3 className="text-2xl font-bold mb-6">CONTACTGEGEVENS</h3>
             
             <div className="space-y-4">

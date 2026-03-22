@@ -49,22 +49,6 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(var(--navy))] to-[hsl(var(--charcoal-light))];
-  }
-  
-  .bg-gradient-hero {
-    background: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--navy-light)) 100%);
-  }
-  
-  .bg-gradient-cta {
-    background: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--navy-light)) 100%);
-  }
-  
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
-  }
-  
   .animate-fade-up {
     animation: fadeUp 0.6s ease-out forwards;
   }

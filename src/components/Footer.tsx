@@ -14,7 +14,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-hero text-primary-foreground" id="contact">
+    <footer className="bg-primary text-primary-foreground" id="contact">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-12">
           <div>
