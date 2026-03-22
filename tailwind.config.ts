@@ -59,7 +59,7 @@ export default {
         cream: "hsl(var(--cream))",
       },
       fontFamily: {
-        heading: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Playfair Display', 'Georgia', 'serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
