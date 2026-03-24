@@ -1,40 +1,46 @@
-import { FileWarning, FileText, Car, Shield, Wine, UserCheck } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
+import gedagvaardImg from "@/assets/gedagvaard.webp";
+import pvImg from "@/assets/pv.webp";
+import ongevalImg from "@/assets/ongeval.jpg";
+import verzekeringImg from "@/assets/verzekering.jpg";
+import gedronkenImg from "@/assets/gedronken.jpeg";
+import gratisAdvocaatImg from "@/assets/gratis-advocaat.jpg";
+
 const services = [
   {
-    icon: FileWarning,
+    image: gedagvaardImg,
     title: "Gedagvaard?",
     description: "Ontvangen u een dagvaarding voor de politierechtbank? Wij staan u bij.",
     href: "/gedagvaard",
   },
   {
-    icon: FileText,
+    image: pvImg,
     title: "Een PV ontvangen?",
     description: "Geconfronteerd met een proces-verbaal? Laat ons u adviseren over uw opties.",
     href: "/pv-ontvangen",
   },
   {
-    icon: Car,
+    image: ongevalImg,
     title: "Een ongeval gehad?",
     description: "Betrokken bij een verkeersongeval? Wij helpen u uw schade te verhalen.",
     href: "/ongeval-gehad",
   },
   {
-    icon: Shield,
+    image: verzekeringImg,
     title: "Vraag over verzekering?",
     description: "Vragen over uw autoverzekering of dekking? Wij geven u helder advies.",
     href: "/verzekering",
   },
   {
-    icon: Wine,
+    image: gedronkenImg,
     title: "Teveel gedronken?",
     description: "Betrapt op rijden onder invloed? Wij kennen de wetgeving en verdedigen u.",
     href: "/teveel-gedronken",
   },
   {
-    icon: UserCheck,
+    image: gratisAdvocaatImg,
     title: "Gratis advocaat",
     description: "Komt u in aanmerking voor gratis rechtsbijstand? Wij informeren u.",
     href: "/gratis-advocaat",
@@ -55,15 +61,19 @@ export const ServiceCards = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <Link to={service.href} key={service.title}>
               <Card 
-                className="group cursor-pointer border-border bg-card h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+                className="group cursor-pointer border-border bg-card h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 overflow-hidden"
               >
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
                 <CardContent className="p-6">
-                  <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                    <service.icon className="w-7 h-7" />
-                  </div>
                   <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {service.title}
                   </h3>
