@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
   return (
-    <section className="relative pt-36 pb-16 md:pt-40 md:pb-20 lg:pt-44 lg:pb-28 bg-primary">
+    <section className="relative pt-36 pb-12 md:pt-40 md:pb-16 lg:pt-44 lg:pb-20 bg-primary">
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:items-start">
           {/* Left: Hero text */}
@@ -36,18 +36,18 @@ export const Hero = () => {
             </div>
 
             {/* Trust indicators */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10 animate-fade-up" style={{ animationDelay: "0.4s" }}>
-              <div className="flex items-center justify-center lg:justify-start gap-3 text-primary-foreground/70">
+            <div className="flex flex-wrap lg:flex-nowrap gap-8 mt-10 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+              <div className="flex items-center gap-3 text-primary-foreground/70">
                 <Shield className="w-5 h-5 flex-shrink-0" />
-                <span className="text-sm font-medium">Grote expertise</span>
+                <span className="text-sm font-medium whitespace-nowrap">Grote expertise</span>
               </div>
-              <div className="flex items-center justify-center lg:justify-start gap-3 text-primary-foreground/70">
+              <div className="flex items-center gap-3 text-primary-foreground/70">
                 <Clock className="w-5 h-5 flex-shrink-0" />
-                <span className="text-sm font-medium">Snelle & efficiënte bijstand</span>
+                <span className="text-sm font-medium whitespace-nowrap">Snelle & efficiënte bijstand</span>
               </div>
-              <div className="flex items-center justify-center lg:justify-start gap-3 text-primary-foreground/70">
+              <div className="flex items-center gap-3 text-primary-foreground/70">
                 <Users className="w-5 h-5 flex-shrink-0" />
-                <span className="text-sm font-medium">Persoonlijke benadering</span>
+                <span className="text-sm font-medium whitespace-nowrap">Persoonlijke benadering</span>
               </div>
             </div>
           </div>
