@@ -22,12 +22,12 @@ export const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold text-lg px-8 py-6">
+            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/80 font-semibold text-lg px-8 py-6">
               DAGVAARDING DOORSTUREN
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <a href="#contact">
-              <Button size="lg" variant="outline" className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-lg px-8 py-6">
+              <Button size="lg" className="bg-muted text-foreground hover:bg-muted/80 font-semibold text-lg px-8 py-6">
                 CONTACTEER ONS NU
               </Button>
             </a>
