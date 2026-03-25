@@ -70,14 +70,7 @@ export const Header = () => {
           <ul className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
               <li key={item.label}>
-                {item.isAnchor ? (
-                  <button
-                    onClick={scrollToContact}
-                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors rounded-lg hover:bg-secondary"
-                  >
-                    {item.label}
-                  </button>
-                ) : item.isRoute ? (
+                {item.isRoute ? (
                   <Link
                     to={item.href}
                     className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors rounded-lg hover:bg-secondary"
@@ -121,14 +114,7 @@ export const Header = () => {
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.label}>
-                  {item.isAnchor ? (
-                    <button
-                      onClick={scrollToContact}
-                      className="block w-full text-left px-4 py-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
-                    >
-                      {item.label}
-                    </button>
-                  ) : item.isRoute ? (
+                  {item.isRoute ? (
                     <Link
                       to={item.href}
                       className="block px-4 py-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
