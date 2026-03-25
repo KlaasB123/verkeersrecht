@@ -6,9 +6,7 @@ import { Button } from "@/components/ui/button";
 const navItems = [
   { label: "Home", href: "/", isRoute: true },
   { label: "Over Ons", href: "/#over-ons", isRoute: false },
-  { label: "Vragen & Advies", href: "/vragen-advies", isRoute: true },
-  { label: "A-Z", href: "/a-z", isRoute: true },
-  { label: "Contact", href: "#contact", isRoute: false, isAnchor: true },
+  { label: "Contact", href: "/contact", isRoute: true },
 ];
 
 export const Header = () => {
@@ -24,15 +22,6 @@ export const Header = () => {
     setIsMenuOpen(false);
   };
 
-  const scrollToContact = () => {
-    const contactElement = document.getElementById('contact');
-    if (contactElement) {
-      contactElement.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      window.location.href = '/#contact';
-    }
-    setIsMenuOpen(false);
-  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
@@ -72,14 +61,7 @@ export const Header = () => {
           <ul className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
               <li key={item.label}>
-                {item.isAnchor ? (
-                  <button
-                    onClick={scrollToContact}
-                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors rounded-lg hover:bg-secondary"
-                  >
-                    {item.label}
-                  </button>
-                ) : item.isRoute ? (
+                {item.isRoute ? (
                   <Link
                     to={item.href}
                     className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors rounded-lg hover:bg-secondary"
@@ -123,14 +105,7 @@ export const Header = () => {
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.label}>
-                  {item.isAnchor ? (
-                    <button
-                      onClick={scrollToContact}
-                      className="block w-full text-left px-4 py-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
-                    >
-                      {item.label}
-                    </button>
-                  ) : item.isRoute ? (
+                  {item.isRoute ? (
                     <Link
                       to={item.href}
                       className="block px-4 py-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
