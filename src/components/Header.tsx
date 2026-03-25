@@ -6,9 +6,7 @@ import { Button } from "@/components/ui/button";
 const navItems = [
   { label: "Home", href: "/", isRoute: true },
   { label: "Over Ons", href: "/#over-ons", isRoute: false },
-  { label: "Vragen & Advies", href: "/vragen-advies", isRoute: true },
-  { label: "A-Z", href: "/a-z", isRoute: true },
-  { label: "Contact", href: "#contact", isRoute: false, isAnchor: true },
+  { label: "Contact", href: "/contact", isRoute: true },
 ];
 
 export const Header = () => {

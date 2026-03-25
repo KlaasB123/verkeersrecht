@@ -1,0 +1,124 @@
+import { MapPin, Phone, Mail, Send } from "lucide-react";
+import { ServicePageLayout } from "@/components/ServicePageLayout";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Card, CardContent } from "@/components/ui/card";
+
+const Contact = () => {
+  return (
+    <ServicePageLayout title="Contact" icon={Phone}>
+      <div className="grid lg:grid-cols-2 gap-10">
+        {/* Left: Form */}
+        <div>
+          <h2 className="text-2xl font-bold text-foreground mb-2">Stel uw vraag</h2>
+          <p className="text-muted-foreground mb-6">
+            Heeft u een vraag over verkeersrecht? Vul onderstaand formulier in en wij antwoorden zo snel mogelijk.
+          </p>
+
+          <Card className="border-0 shadow-lg">
+            <CardContent className="pt-6">
+              <form className="space-y-5">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Naam *</Label>
+                    <Input id="name" placeholder="Uw volledige naam" required />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Telefoon</Label>
+                    <Input id="phone" type="tel" placeholder="+32 ..." />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email">E-mail *</Label>
+                  <Input id="email" type="email" placeholder="uw@email.be" required />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="subject">Onderwerp</Label>
+                  <Input id="subject" placeholder="Waar gaat uw vraag over?" />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="question">Uw vraag *</Label>
+                  <Textarea
+                    id="question"
+                    placeholder="Stel hier uw vraag..."
+                    className="min-h-[150px]"
+                    required
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
+                >
+                  VERSTUREN
+                  <Send className="ml-2 w-5 h-5" />
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Right: Info + Map */}
+        <div className="space-y-6">
+          <div>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Contactgegevens</h2>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <p className="font-semibold text-foreground">Advocatenkantoor Govarts BV</p>
+                  <p className="text-muted-foreground">Residentie Refuga</p>
+                  <p className="text-muted-foreground">Meldertstraat 13 bus 0.03</p>
+                  <p className="text-muted-foreground">B-3500 Hasselt</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
+                <a href="tel:+3211371511" className="text-foreground font-semibold hover:text-primary transition-colors">
+                  +32(0) 11 37 15 11
+                </a>
+              </div>
+              <div className="flex items-start gap-3">
+                <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <div>
+                  <a href="mailto:erwin@verkeersrecht.info" className="block text-foreground hover:text-primary transition-colors">
+                    erwin@verkeersrecht.info
+                  </a>
+                  <a href="mailto:info@govarts.be" className="block text-foreground hover:text-primary transition-colors">
+                    info@govarts.be
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-sm text-muted-foreground">
+            <p>BTW: BE 0837.325.675</p>
+          </div>
+
+          {/* Google Maps embed */}
+          <div className="rounded-xl overflow-hidden border border-border shadow-lg">
+            <iframe
+              title="Locatie Advocatenkantoor Govarts"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2516.5!2d5.3378!3d50.9307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c121a5e8b6e8e7%3A0x0!2sMeldertstraat%2013%2C%203500%20Hasselt!5e0!3m2!1snl!2sbe!4v1700000000000!5m2!1snl!2sbe"
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </div>
+    </ServicePageLayout>
+  );
+};
+
+export default Contact;

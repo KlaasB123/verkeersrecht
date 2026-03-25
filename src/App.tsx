@@ -11,7 +11,7 @@ import OngevalGehad from "./pages/OngevalGehad";
 import Verzekering from "./pages/Verzekering";
 import TeveelGedronken from "./pages/TeveelGedronken";
 import GratisAdvocaat from "./pages/GratisAdvocaat";
-import VragenAdvies from "./pages/VragenAdvies";
+import Contact from "./pages/Contact";
 import AZIndex from "./pages/AZIndex";
 import AZTermDetail from "./pages/AZTermDetail";
 import NotFound from "./pages/NotFound";
@@ -93,8 +93,9 @@ const App = () => (
           <Route path="/teveel-gedronken/rijverbod-en-inlevering-rijbewijs" element={<TeveelRijverbod />} />
           <Route path="/teveel-gedronken/medische-psychologische-proeven" element={<MedischePsychologischeProeven />} />
           <Route path="/teveel-gedronken/herstelexamens" element={<Herstelexamens />} />
-          {/* Vragen & Advies and A-Z */}
-          <Route path="/vragen-advies" element={<VragenAdvies />} />
+          {/* Contact and A-Z */}
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/vragen-advies" element={<Contact />} />
           <Route path="/a-z" element={<AZIndex />} />
           <Route path="/a-z/:term" element={<AZTermDetail />} />
           {/* Other */}

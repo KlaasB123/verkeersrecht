@@ -39,7 +39,7 @@ export const Footer = () => {
                   Over ons
                 </button>
               </li>
-              <li><Link to="/vragen-advies" className="hover:text-primary-foreground transition-colors">Vragen & advies</Link></li>
+              <li><Link to="/contact" className="hover:text-primary-foreground transition-colors">Contact</Link></li>
               <li>
                 <button 
                   onClick={() => scrollToSection('form')} 
