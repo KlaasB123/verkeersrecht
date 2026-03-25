@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
+import erwinPhoto from "@/assets/erwin-govarts.jpg";
 
 const features = [
   "Grote expertise in verkeersrecht",
@@ -43,39 +44,12 @@ export const AboutSection = () => {
             </div>
           </div>
 
-          <div className="bg-primary rounded-2xl p-8 text-primary-foreground">
-            <h3 className="text-2xl font-bold mb-6">CONTACTGEGEVENS</h3>
-            
-            <div className="space-y-4">
-              <div>
-                <p className="text-primary-foreground/70 text-sm mb-1">Adres</p>
-                <p className="font-medium">Residentie Refuga</p>
-                <p>Meldertstraat 13 bus 0.03</p>
-                <p>B-3500 Hasselt</p>
-              </div>
-              
-              <div>
-                <p className="text-primary-foreground/70 text-sm mb-1">BTW</p>
-                <p>BE 0837.325.675</p>
-              </div>
-              
-              <div>
-                <p className="text-primary-foreground/70 text-sm mb-1">Telefoon</p>
-                <a href="tel:+3211371511" className="font-medium text-primary-foreground hover:underline">
-                  +32(0) 11 37 15 11
-                </a>
-              </div>
-              
-              <div>
-                <p className="text-primary-foreground/70 text-sm mb-1">E-mail</p>
-                <a href="mailto:erwin@verkeersrecht.info" className="font-medium text-primary-foreground hover:underline block">
-                  erwin@verkeersrecht.info
-                </a>
-                <a href="mailto:info@govarts.be" className="font-medium text-primary-foreground hover:underline block">
-                  info@govarts.be
-                </a>
-              </div>
-            </div>
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={erwinPhoto}
+              alt="Erwin Govarts – Advocatenkantoor Govarts BV"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
