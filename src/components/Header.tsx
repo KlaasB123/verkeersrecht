@@ -53,10 +53,10 @@ export const Header = () => {
       </div>
 
       {/* Main navigation */}
-      <nav className="container mx-auto px-4 py-1">
+      <nav className="container mx-auto px-4 py-0">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center">
-            <img src={symbolenImg} alt="Verkeersrecht symbolen" className="h-20 w-auto" />
+          <Link to="/" className="flex items-center -my-4">
+            <img src={symbolenImg} alt="Verkeersrecht symbolen" className="h-28 w-auto" />
           </Link>
 
           {/* Desktop navigation */}
