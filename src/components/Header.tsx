@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoGovarts from "@/assets/logo-govarts.png";
+import symbolenImg from "@/assets/transparant_symbolen.png";
 
 const navItems = [
   { label: "Home", href: "/", isRoute: true },
@@ -54,7 +55,8 @@ export const Header = () => {
       {/* Main navigation */}
       <nav className="container mx-auto px-4 py-1">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-4">
+            <img src={symbolenImg} alt="Verkeersrecht symbolen" className="h-14 w-auto" />
             <img src={logoGovarts} alt="Advocatenkantoor Govarts" className="h-16 w-auto mix-blend-multiply" style={{ imageRendering: 'auto' }} />
           </Link>
 
