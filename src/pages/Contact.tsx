@@ -14,12 +14,10 @@ const Contact = () => {
             Heeft u een vraag over verkeersrecht? Stuur ons direct een e-mail en wij antwoorden zo snel mogelijk.
           </p>
 
-          <Card className="border-0 shadow-lg mx-auto max-w-md lg:max-w-none lg:mx-0">
+          <Card className="w-[calc(100%-2rem)] max-w-md mx-auto lg:w-full lg:max-w-none lg:mx-0 border-0 shadow-lg">
             <CardContent className="pt-8 pb-8 flex flex-col items-center text-center gap-4">
               <Mail className="w-12 h-12 text-primary" />
-              <p className="text-lg text-foreground">
-                Stuur uw vraag naar:
-              </p>
+              <p className="text-lg text-foreground">Stuur uw vraag naar:</p>
               <a
                 href="mailto:erwin@verkeersrecht.info"
                 className="text-2xl font-bold text-primary hover:underline transition-colors"
@@ -79,7 +77,7 @@ const Contact = () => {
         {/* Right: Map */}
         <div className="flex flex-col">
           <h2 className="text-2xl font-bold text-foreground mb-4">Locatie</h2>
-          <div className="mx-auto max-w-md lg:max-w-none lg:mx-0 w-full rounded-xl overflow-hidden border border-border shadow-lg flex-1">
+          <div className="w-[calc(100%-2rem)] max-w-md mx-auto lg:w-full lg:max-w-none lg:mx-0 rounded-xl overflow-hidden border border-border shadow-lg flex-1">
             <iframe
               title="Locatie Advocatenkantoor Govarts"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2516.5!2d5.3378!3d50.9307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c121a5e8b6e8e7%3A0x0!2sMeldertstraat%2013%2C%203500%20Hasselt!5e0!3m2!1snl!2sbe!4v1700000000000!5m2!1snl!2sbe"
