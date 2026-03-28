@@ -19,9 +19,8 @@ export const Footer = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-4 gap-12">
           <div>
-            <Link to="/" className="mb-6 inline-block">
-              <span className="text-2xl font-bold tracking-tight">verkeersrecht</span>
-              <span className="text-primary-foreground/60">.info</span>
+            <Link to="/" className="mb-4 inline-block">
+              <img src={logoNavy} alt="Advocatenkantoor Govarts" className="h-16 w-auto" />
             </Link>
             <p className="text-primary-foreground/70 leading-relaxed">
               Uw expert in verkeersrecht. Wij helpen u bij verkeersovertredingen en verkeersongevallen in België.
