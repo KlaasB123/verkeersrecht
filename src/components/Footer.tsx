@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-import logoNavy from "@/assets/logo-govarts-navy.png";
+import logoWhite from "@/assets/logo-govarts-white.png";
 import { Link, useNavigate } from "react-router-dom";
 
 export const Footer = () => {
