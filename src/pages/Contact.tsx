@@ -1,9 +1,6 @@
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Contact = () => {
