@@ -14,72 +14,11 @@ const Contact = () => {
             Heeft u een vraag over verkeersrecht? Stuur ons direct een e-mail en wij antwoorden zo snel mogelijk.
           </p>
 
-          <Card className="border-0 shadow-lg mx-auto max-w-md lg:max-w-none lg:mx-0">
-            <CardContent className="pt-8 pb-8 flex flex-col items-center text-center gap-4">
-              <Mail className="w-12 h-12 text-primary" />
-              <p className="text-lg text-foreground">
-                Stuur uw vraag naar:
-              </p>
-              <a
-                href="mailto:erwin@verkeersrecht.info"
-                className="text-2xl font-bold text-primary hover:underline transition-colors"
-              >
-                erwin@verkeersrecht.info
-              </a>
-              <Button
-                asChild
-                size="lg"
-                className="mt-2 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
-              >
-                <a href="mailto:erwin@verkeersrecht.info">
-                  <Send className="mr-2 w-5 h-5" />
-                  E-MAIL VERSTUREN
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Middle: Contact Info */}
-        <div>
-          <h2 className="text-2xl font-bold text-foreground mb-4">Contactgegevens</h2>
-          <div className="space-y-4">
-            <div className="flex items-start gap-3">
-              <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-              <div>
-                <p className="font-semibold text-foreground">Advocatenkantoor Govarts BV</p>
-                <p className="text-muted-foreground">Residentie Refuga</p>
-                <p className="text-muted-foreground">Meldertstraat 13 bus 0.03</p>
-                <p className="text-muted-foreground">B-3500 Hasselt</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-              <a href="tel:+3211371511" className="text-foreground font-semibold hover:text-primary transition-colors">
-                +32(0) 11 37 15 11
-              </a>
-            </div>
-            <div className="flex items-start gap-3">
-              <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-              <div>
-                <a href="mailto:erwin@verkeersrecht.info" className="block text-foreground hover:text-primary transition-colors">
-                  erwin@verkeersrecht.info
-                </a>
-                <a href="mailto:info@govarts.be" className="block text-foreground hover:text-primary transition-colors">
-                  info@govarts.be
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="text-sm text-muted-foreground mt-4">
-            <p>BTW: BE 0837.325.675</p>
-          </div>
-        </div>
-
-        {/* Right: Map */}
+          <Card className="w-[calc(100%-2rem)] max-w-md mx-auto lg:w-full lg:max-w-none lg:mx-0 border-0 shadow-lg">
+...
         <div className="flex flex-col">
           <h2 className="text-2xl font-bold text-foreground mb-4">Locatie</h2>
-          <div className="mx-auto max-w-md lg:max-w-none lg:mx-0 w-full rounded-xl overflow-hidden border border-border shadow-lg flex-1">
+          <div className="w-[calc(100%-2rem)] max-w-md mx-auto lg:w-full lg:max-w-none lg:mx-0 rounded-xl overflow-hidden border border-border shadow-lg flex-1">
             <iframe
               title="Locatie Advocatenkantoor Govarts"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2516.5!2d5.3378!3d50.9307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c121a5e8b6e8e7%3A0x0!2sMeldertstraat%2013%2C%203500%20Hasselt!5e0!3m2!1snl!2sbe!4v1700000000000!5m2!1snl!2sbe"
