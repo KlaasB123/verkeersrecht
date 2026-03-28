@@ -15,6 +15,7 @@ import Contact from "./pages/Contact";
 import AZIndex from "./pages/AZIndex";
 import AZTermDetail from "./pages/AZTermDetail";
 import NotFound from "./pages/NotFound";
+import VeelgesteldeVragen from "./pages/VeelgesteldeVragen";
 
 // Gedagvaard sub-pages
 import VoorWelkeRechtbank from "./pages/gedagvaard/VoorWelkeRechtbank";
@@ -100,6 +101,7 @@ const App = () => (
           <Route path="/a-z/:term" element={<AZTermDetail />} />
           {/* Other */}
           <Route path="/gratis-advocaat" element={<GratisAdvocaat />} />
+          <Route path="/veelgestelde-vragen" element={<VeelgesteldeVragen />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
