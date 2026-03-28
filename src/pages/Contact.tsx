@@ -1,9 +1,6 @@
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Contact = () => {
@@ -14,52 +11,31 @@ const Contact = () => {
         <div>
           <h2 className="text-2xl font-bold text-foreground mb-2">Stel uw vraag</h2>
           <p className="text-muted-foreground mb-6">
-            Heeft u een vraag over verkeersrecht? Vul onderstaand formulier in en wij antwoorden zo snel mogelijk.
+            Heeft u een vraag over verkeersrecht? Stuur ons direct een e-mail en wij antwoorden zo snel mogelijk.
           </p>
 
           <Card className="border-0 shadow-lg">
-            <CardContent className="pt-6">
-              <form className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Naam *</Label>
-                    <Input id="name" placeholder="Uw volledige naam" required />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Telefoon</Label>
-                    <Input id="phone" type="tel" placeholder="+32 ..." />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="email">E-mail *</Label>
-                  <Input id="email" type="email" placeholder="uw@email.be" required />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="subject">Onderwerp</Label>
-                  <Input id="subject" placeholder="Waar gaat uw vraag over?" />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="question">Uw vraag *</Label>
-                  <Textarea
-                    id="question"
-                    placeholder="Stel hier uw vraag..."
-                    className="min-h-[150px]"
-                    required
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
-                >
-                  VERSTUREN
-                  <Send className="ml-2 w-5 h-5" />
-                </Button>
-              </form>
+            <CardContent className="pt-8 pb-8 flex flex-col items-center text-center gap-4">
+              <Mail className="w-12 h-12 text-primary" />
+              <p className="text-lg text-foreground">
+                Stuur uw vraag naar:
+              </p>
+              <a
+                href="mailto:erwin@verkeersrecht.info"
+                className="text-2xl font-bold text-primary hover:underline transition-colors"
+              >
+                erwin@verkeersrecht.info
+              </a>
+              <Button
+                asChild
+                size="lg"
+                className="mt-2 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
+              >
+                <a href="mailto:erwin@verkeersrecht.info">
+                  <Send className="mr-2 w-5 h-5" />
+                  E-MAIL VERSTUREN
+                </a>
+              </Button>
             </CardContent>
           </Card>
         </div>
