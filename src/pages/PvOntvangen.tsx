@@ -10,7 +10,7 @@ const subLinks = [
 
 const PvOntvangen = () => {
   return (
-    <ServicePageLayout title="Een PV ontvangen?" icon={FileText} subLinks={subLinks}>
+    <ServicePageLayout title="Een PV ontvangen?" icon={FileText} subLinks={subLinks} metaDescription="PV ontvangen voor een verkeersovertreding? Ontdek uw opties: onmiddellijke inning, bevel tot betalen, geldboete. Advocatenkantoor Govarts helpt u verder.">
       <p className="text-lg leading-relaxed mb-6">
         Wanneer u een verkeersovertreding begaan hebt, zult u vanwege de politie eerst een proces-verbaal (PV) met een antwoordformulier ontvangen. In het PV staan de vaststellingen opgesomd (voertuig, nummerplaat, snelheid, enz.) en meestal ook de te betalen geldboete (onmiddellijke inning). Op het antwoordformulier wordt u gevraagd allerhande gegevens op te schrijven. Het parket (openbaar ministerie) weet zo wie er gereden heeft en dus de geldboete zal toegestuurd krijgen wanneer u het niet was. Betaalt u de onmiddellijke inning niet, zal het parket (openbaar ministerie) een bevel geven tot betalen.
       </p>

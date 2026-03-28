@@ -8,7 +8,7 @@ const subLinks = [
 
 const Verzekering = () => {
   return (
-    <ServicePageLayout title="Een vraag over uw verzekering?" icon={Shield} subLinks={subLinks}>
+    <ServicePageLayout title="Een vraag over uw verzekering?" icon={Shield} subLinks={subLinks} metaDescription="Vraag over uw autoverzekering na een ongeval? Advocatenkantoor Govarts helpt bij terugvordering en omniumverzekering. Gratis eerste contact.">
       <p className="text-lg leading-relaxed mb-6">
         Elk voertuig dient verplicht verzekerd te zijn in B.A. B.A. betekent burgerlijke aansprakelijkheid. M.a.w. wanneer u schade bij iemand anders veroorzaakt door een fout met uw voertuig, zal de verzekering deze schade vergoeden.
       </p>
