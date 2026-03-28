@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoGovarts from "@/assets/logo-govarts.png";
 
 const navItems = [
   { label: "Home", href: "/", isRoute: true },
@@ -52,9 +53,8 @@ export const Header = () => {
       {/* Main navigation */}
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex flex-col">
-            <span className="text-2xl font-bold text-primary tracking-tight">verkeersrecht</span>
-            <span className="text-navy-light text-sm font-medium">.info</span>
+          <Link to="/" className="flex items-center gap-3">
+            <img src={logoGovarts} alt="Advocatenkantoor Govarts" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop navigation */}
