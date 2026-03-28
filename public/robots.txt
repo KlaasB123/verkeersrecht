@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://verkeersrecht.lovable.app/sitemap.xml
