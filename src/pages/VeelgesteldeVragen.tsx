@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import {
   Accordion,
   AccordionContent,
@@ -125,6 +126,10 @@ const VeelgesteldeVragen = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Veelgestelde Vragen" 
+        description="Antwoorden op veelgestelde vragen over verkeersrecht in België: rijbewijs, alcohol, procedure, kosten en aansprakelijkheid. Advocatenkantoor Govarts." 
+      />
       <Header />
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 max-w-4xl">

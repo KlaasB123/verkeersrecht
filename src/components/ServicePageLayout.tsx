@@ -2,6 +2,7 @@ import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import { LucideIcon } from "lucide-react";
 
 interface SubLink {
@@ -14,11 +15,14 @@ interface ServicePageLayoutProps {
   icon: LucideIcon;
   children: React.ReactNode;
   subLinks?: SubLink[];
+  metaDescription?: string;
 }
 
-export const ServicePageLayout = ({ title, icon: Icon, children, subLinks }: ServicePageLayoutProps) => {
+export const ServicePageLayout = ({ title, icon: Icon, children, subLinks, metaDescription }: ServicePageLayoutProps) => {
+  const defaultDescription = `${title} - Advocatenkantoor Govarts, specialist verkeersrecht in België. Meer dan 30 jaar ervaring. Gratis eerste contact.`;
   return (
     <div className="min-h-screen bg-background">
+      <SEO title={title} description={metaDescription || defaultDescription} />
       <Header />
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4">

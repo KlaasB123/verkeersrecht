@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const Contact = () => {
   return (
-    <ServicePageLayout title="Contact" icon={Phone}>
+    <ServicePageLayout title="Contact" icon={Phone} metaDescription="Contacteer Advocatenkantoor Govarts voor al uw vragen over verkeersrecht. Eerste contact is gratis. Bel +32(0) 11 37 15 11 of stuur een e-mail.">
       <div className="grid lg:grid-cols-2 gap-10">
         {/* Left: Form */}
         <div>

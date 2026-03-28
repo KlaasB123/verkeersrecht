@@ -10,7 +10,7 @@ const subLinks = [
 
 const TeveelGedronken = () => {
   return (
-    <ServicePageLayout title="Teveel gedronken?" icon={Wine} subLinks={subLinks}>
+    <ServicePageLayout title="Teveel gedronken?" icon={Wine} subLinks={subLinks} metaDescription="Betrapt op rijden onder invloed? Advocatenkantoor Govarts helpt bij rijbewijsintrekking, rijverbod, herstelexamens en medische proeven.">
       <p className="text-lg leading-relaxed mb-6">
         Wanneer u met de auto bent, kan de politie u ondermeer een ademtest of een ademanalyse opleggen:
       </p>

@@ -15,7 +15,7 @@ const subLinks = [
 
 const Gedagvaard = () => {
   return (
-    <ServicePageLayout title="Gedagvaard?" icon={FileWarning} subLinks={subLinks}>
+    <ServicePageLayout title="Gedagvaard?" icon={FileWarning} subLinks={subLinks} metaDescription="Gedagvaard voor de politierechtbank? Advocatenkantoor Govarts helpt u met meer dan 30 jaar ervaring in verkeersrecht. Gratis eerste contact.">
       <p className="text-lg leading-relaxed mb-6">
         Een dagvaarding is de oproeping via de gerechtsdeurwaarder om te verschijnen voor de Rechtbank (in verkeerszaken de Politierechtbank) voor een overtreding die u begaan heeft. Opgepast, dit zal meestal ongeveer binnen de tien dagen zijn. Het kan ook korter maar nooit minder dan drie dagen. U heeft dus niet veel tijd.
       </p>
