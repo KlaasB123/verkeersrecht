@@ -7,6 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Car, Wine, Scale, Coins, ShieldAlert } from "lucide-react";
+import { useEffect } from "react";
 
 const faqCategories = [
   {
