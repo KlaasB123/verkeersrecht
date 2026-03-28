@@ -25,15 +25,17 @@ export const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: "0.3s" }}>
-              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/80 font-semibold text-base sm:text-lg px-6 py-5 sm:px-8 sm:py-6">
-                DAGVAARDING DOORSTUREN
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <a href="#contact">
+              <a href="#form">
+                <Button size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/80 font-semibold text-base sm:text-lg px-6 py-5 sm:px-8 sm:py-6">
+                  DAGVAARDING DOORSTUREN
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </a>
+              <Link to="/contact">
                 <Button size="lg" className="w-full bg-muted text-foreground hover:bg-muted/80 font-semibold text-base sm:text-lg px-6 py-5 sm:px-8 sm:py-6">
                   CONTACTEER ONS NU
                 </Button>
-              </a>
+              </Link>
             </div>
 
             {/* Trust indicators */}
