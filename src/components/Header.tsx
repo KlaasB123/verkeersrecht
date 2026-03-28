@@ -51,10 +51,10 @@ export const Header = () => {
       </div>
 
       {/* Main navigation */}
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-4 py-1">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logoGovarts} alt="Advocatenkantoor Govarts" className="h-24 w-auto mix-blend-multiply" style={{ imageRendering: 'auto' }} />
+            <img src={logoGovarts} alt="Advocatenkantoor Govarts" className="h-16 w-auto mix-blend-multiply" style={{ imageRendering: 'auto' }} />
           </Link>
 
           {/* Desktop navigation */}
