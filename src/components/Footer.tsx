@@ -41,6 +41,7 @@ export const Footer = () => {
                   Over ons
                 </button>
               </li>
+              <li><Link to="/veelgestelde-vragen" className="hover:text-primary-foreground transition-colors">Veelgestelde vragen</Link></li>
               <li><Link to="/contact" className="hover:text-primary-foreground transition-colors">Contact</Link></li>
               <li>
                 <button 

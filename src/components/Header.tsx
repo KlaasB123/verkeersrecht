@@ -7,8 +7,8 @@ import symbolenImg from "@/assets/transparant_symbolen.png";
 
 const navItems = [
   { label: "Home", href: "/", isRoute: true },
-  { label: "Over Ons", href: "/#over-ons", isRoute: false },
-  { label: "Veelgestelde Vragen", href: "/veelgestelde-vragen", isRoute: true },
+  { label: "Over ons", href: "/#over-ons", isRoute: false },
+  { label: "Veelgestelde vragen", href: "/veelgestelde-vragen", isRoute: true },
   { label: "Contact", href: "/contact", isRoute: true },
 ];
 
