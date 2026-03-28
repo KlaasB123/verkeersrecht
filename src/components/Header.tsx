@@ -7,6 +7,7 @@ import logoGovarts from "@/assets/logo-govarts.png";
 const navItems = [
   { label: "Home", href: "/", isRoute: true },
   { label: "Over Ons", href: "/#over-ons", isRoute: false },
+  { label: "Veelgestelde Vragen", href: "/veelgestelde-vragen", isRoute: true },
   { label: "Contact", href: "/contact", isRoute: true },
 ];
 
