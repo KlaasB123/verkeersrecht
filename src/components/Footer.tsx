@@ -20,7 +20,7 @@ export const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12">
           <div>
             <Link to="/" className="mb-4 inline-block">
-              <img src={logoWhite} alt="Advocatenkantoor Govarts" className="h-20 w-auto" />
+              <img src={logoWhite} alt="Advocatenkantoor Govarts" className="h-32 w-auto" />
             </Link>
             <p className="text-primary-foreground/70 leading-relaxed">
               Uw expert in verkeersrecht. Wij helpen u bij verkeersovertredingen en verkeersongevallen in België.
