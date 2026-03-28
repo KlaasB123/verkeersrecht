@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const Contact = () => {
   return (
     <ServicePageLayout title="Contact" icon={Phone} metaDescription="Contacteer Advocatenkantoor Govarts voor al uw vragen over verkeersrecht. Eerste contact is gratis. Bel +32(0) 11 37 15 11 of stuur een e-mail.">
-      <div className="grid lg:grid-cols-3 gap-8">
+      <div className="not-prose grid lg:grid-cols-3 gap-8">
         {/* Left: Email CTA */}
         <div>
           <h2 className="text-2xl font-bold text-foreground mb-2">Stel uw vraag</h2>
