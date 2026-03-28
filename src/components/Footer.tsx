@@ -18,10 +18,12 @@ export const Footer = () => {
     <footer className="bg-primary text-primary-foreground" id="contact">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-4 gap-12 items-end">
-          <div className="flex flex-col items-center text-center">
-            <Link to="/" className="mb-4 inline-block">
-              <img src={logoWhite} alt="Advocatenkantoor Govarts" className="h-32 w-auto" />
-            </Link>
+          <div className="flex flex-col">
+            <div className="flex justify-center mb-4">
+              <Link to="/">
+                <img src={logoWhite} alt="Advocatenkantoor Govarts" className="h-32 w-auto" />
+              </Link>
+            </div>
             <p className="text-primary-foreground/70 leading-relaxed">
               Uw expert in verkeersrecht. Wij helpen u bij verkeersovertredingen en verkeersongevallen in België.
             </p>
