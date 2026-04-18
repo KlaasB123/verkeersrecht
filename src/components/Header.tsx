@@ -42,9 +42,7 @@ export const Header = () => {
             </a>
           </div>
           <a 
-            href="https://www.facebook.com/verkeersrecht" 
-            target="_blank" 
-            rel="noopener noreferrer"
+            href="mailto:erwin@verkeersrecht.info"
             className="hover:text-primary-foreground/70 transition-colors"
           >
             Een vraag stellen?
