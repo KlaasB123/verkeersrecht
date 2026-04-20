@@ -35,7 +35,7 @@ export const EmailLink = ({
   if (body) qs.set("body", body);
   const query = qs.toString();
 
-  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+  const gmailUrl = `https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=${encodeURIComponent(
     email
   )}${subject ? `&su=${encodeURIComponent(subject)}` : ""}${
     body ? `&body=${encodeURIComponent(body)}` : ""
