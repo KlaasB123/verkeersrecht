@@ -2,6 +2,7 @@ import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { EmailLink } from "@/components/EmailLink";
 
 const Contact = () => {
   return (
@@ -18,22 +19,19 @@ const Contact = () => {
             <CardContent className="pt-8 pb-8 flex flex-col items-center text-center gap-4">
               <Mail className="w-12 h-12 text-primary" />
               <p className="text-lg text-foreground">Stuur uw vraag naar:</p>
-              <a
-                href="mailto:erwin@verkeersrecht.info"
+              <EmailLink
+                email="erwin@verkeersrecht.info"
                 className="text-2xl font-bold text-primary hover:underline transition-colors"
               >
                 erwin@verkeersrecht.info
-              </a>
-              <Button
-                asChild
-                size="lg"
-                className="mt-2 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
+              </EmailLink>
+              <EmailLink
+                email="erwin@verkeersrecht.info"
+                className="mt-2 inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-11 px-8 text-base shadow"
               >
-                <a href="mailto:erwin@verkeersrecht.info">
-                  <Send className="mr-2 w-5 h-5" />
-                  E-MAIL VERSTUREN
-                </a>
-              </Button>
+                <Send className="mr-2 w-5 h-5" />
+                E-MAIL VERSTUREN
+              </EmailLink>
             </CardContent>
           </Card>
         </div>
@@ -60,12 +58,12 @@ const Contact = () => {
             <div className="flex items-start gap-3">
               <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
               <div>
-                <a href="mailto:erwin@verkeersrecht.info" className="block text-foreground hover:text-primary transition-colors">
+                <EmailLink email="erwin@verkeersrecht.info" className="block text-foreground hover:text-primary transition-colors">
                   erwin@verkeersrecht.info
-                </a>
-                <a href="mailto:info@govarts.be" className="block text-foreground hover:text-primary transition-colors">
+                </EmailLink>
+                <EmailLink email="info@govarts.be" className="block text-foreground hover:text-primary transition-colors">
                   info@govarts.be
-                </a>
+                </EmailLink>
               </div>
             </div>
           </div>

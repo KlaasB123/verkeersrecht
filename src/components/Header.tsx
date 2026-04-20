@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { EmailLink } from "@/components/EmailLink";
 import logoGovarts from "@/assets/logo-govarts.png";
 import symbolenImg from "@/assets/transparant_symbolen.png";
 
@@ -36,17 +37,20 @@ export const Header = () => {
               <Phone className="w-4 h-4" />
               <span>+32(0) 11 37 15 11</span>
             </a>
-            <a href="mailto:erwin@verkeersrecht.info" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/70 transition-colors">
+            <EmailLink
+              email="erwin@verkeersrecht.info"
+              className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/70 transition-colors"
+            >
               <Mail className="w-4 h-4" />
               <span>erwin@verkeersrecht.info</span>
-            </a>
+            </EmailLink>
           </div>
-          <a 
-            href="mailto:erwin@verkeersrecht.info"
+          <EmailLink
+            email="erwin@verkeersrecht.info"
             className="hover:text-primary-foreground/70 transition-colors"
           >
             Een vraag stellen?
-          </a>
+          </EmailLink>
         </div>
       </div>
 

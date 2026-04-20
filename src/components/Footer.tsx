@@ -1,6 +1,7 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import logoWhite from "@/assets/logo-govarts-white.png";
 import { Link, useNavigate } from "react-router-dom";
+import { EmailLink } from "@/components/EmailLink";
 
 export const Footer = () => {
   const navigate = useNavigate();
@@ -73,9 +74,12 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary-foreground/50 flex-shrink-0" />
-                <a href="mailto:erwin@verkeersrecht.info" className="hover:text-primary-foreground transition-colors">
+                <EmailLink
+                  email="erwin@verkeersrecht.info"
+                  className="hover:text-primary-foreground transition-colors"
+                >
                   erwin@verkeersrecht.info
-                </a>
+                </EmailLink>
               </li>
             </ul>
           </div>
