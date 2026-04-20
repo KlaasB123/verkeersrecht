@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
+import { EmailLink } from "@/components/EmailLink";
 
 const VragenAdvies = () => {
   return (
@@ -15,9 +16,10 @@ const VragenAdvies = () => {
 
       <p className="mb-8">
         Het gratis antwoord zal gebaseerd zijn op de gegevens die u ons ter beschikking stelt. U dient er echter rekening mee te houden dat het eerste advies kort en bondig zal zijn. Voor verdere informatie kan u per mail contact opnemen via{" "}
-        <a href="mailto:erwin@verkeersrecht.info" className="text-primary hover:underline">
+        <EmailLink email="erwin@verkeersrecht.info" className="text-primary hover:underline">
           erwin@verkeersrecht.info
-        </a>.
+        </EmailLink>
+        .
       </p>
 
       <Card className="border-0 shadow-lg">
@@ -41,17 +43,17 @@ const VragenAdvies = () => {
 
             <div className="space-y-2">
               <Label htmlFor="question">Uw vraag *</Label>
-              <Textarea 
-                id="question" 
-                placeholder="Stel hier uw vraag..." 
+              <Textarea
+                id="question"
+                placeholder="Stel hier uw vraag..."
                 className="min-h-[150px]"
-                required 
+                required
               />
             </div>
 
-            <Button 
-              type="submit" 
-              size="lg" 
+            <Button
+              type="submit"
+              size="lg"
               className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
             >
               VERSTUREN

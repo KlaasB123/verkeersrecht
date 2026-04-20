@@ -35,12 +35,12 @@ export const EmailLink = ({
   if (body) qs.set("body", body);
   const query = qs.toString();
 
-  const gmailUrl = `https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=${encodeURIComponent(
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${encodeURIComponent(
     email
   )}${subject ? `&su=${encodeURIComponent(subject)}` : ""}${
     body ? `&body=${encodeURIComponent(body)}` : ""
   }`;
-  const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=${encodeURIComponent(
+  const outlookUrl = `https://outlook.office.com/mail/deeplink/compose?to=${encodeURIComponent(
     email
   )}${subject ? `&subject=${encodeURIComponent(subject)}` : ""}${
     body ? `&body=${encodeURIComponent(body)}` : ""
@@ -63,6 +63,21 @@ export const EmailLink = ({
     }
   };
 
+  const openMailOption = (url: string, external: boolean) => {
+    setOpen(false);
+
+    if (!external) {
+      window.location.href = url;
+      return;
+    }
+
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+
+    if (!newWindow) {
+      window.location.href = url;
+    }
+  };
+
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
     setOpen(true);
@@ -70,7 +85,7 @@ export const EmailLink = ({
 
   const options = [
     { label: "Gmail", desc: "In de browser openen", url: gmailUrl, external: true },
-    { label: "Outlook.com", desc: "In de browser openen", url: outlookUrl, external: true },
+    { label: "Outlook", desc: "In de browser openen", url: outlookUrl, external: true },
     { label: "Yahoo Mail", desc: "In de browser openen", url: yahooUrl, external: true },
     { label: "Standaard mail-app", desc: "Op uw computer of telefoon", url: mailtoUrl, external: false },
   ];
@@ -102,23 +117,22 @@ export const EmailLink = ({
 
           <div className="grid gap-2 mt-2">
             {options.map((opt) => (
-              <a
+              <button
                 key={opt.label}
-                href={opt.url}
-                target={opt.external ? "_blank" : undefined}
-                rel={opt.external ? "noopener noreferrer" : undefined}
-                onClick={() => setOpen(false)}
-                className="flex items-center justify-between p-3 rounded-lg border border-border hover:bg-secondary transition-colors group"
+                type="button"
+                onClick={() => openMailOption(opt.url, opt.external)}
+                className="flex items-center justify-between p-3 rounded-lg border border-border hover:bg-secondary transition-colors group text-left"
               >
                 <div>
                   <div className="font-medium text-foreground">{opt.label}</div>
                   <div className="text-sm text-muted-foreground">{opt.desc}</div>
                 </div>
                 <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
-              </a>
+              </button>
             ))}
 
             <button
+              type="button"
               onClick={handleCopy}
               className="flex items-center justify-between p-3 rounded-lg border border-border hover:bg-secondary transition-colors group text-left"
             >
