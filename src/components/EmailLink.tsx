@@ -63,19 +63,9 @@ export const EmailLink = ({
     }
   };
 
-  const openMailOption = (url: string, external: boolean) => {
+  const openMailOption = (url: string) => {
     setOpen(false);
-
-    if (!external) {
-      window.location.href = url;
-      return;
-    }
-
-    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
-
-    if (!newWindow) {
-      window.location.href = url;
-    }
+    window.location.href = url;
   };
 
   const handleClick = (e: React.MouseEvent) => {
@@ -83,11 +73,10 @@ export const EmailLink = ({
     setOpen(true);
   };
 
-  const options = [
-    { label: "Gmail", desc: "In de browser openen", url: gmailUrl, external: true },
-    { label: "Outlook", desc: "In de browser openen", url: outlookUrl, external: true },
-    { label: "Yahoo Mail", desc: "In de browser openen", url: yahooUrl, external: true },
-    { label: "Standaard mail-app", desc: "Op uw computer of telefoon", url: mailtoUrl, external: false },
+  const externalOptions = [
+    { label: "Gmail", desc: "In de browser openen", url: gmailUrl },
+    { label: "Outlook", desc: "In de browser openen", url: outlookUrl },
+    { label: "Yahoo Mail", desc: "In de browser openen", url: yahooUrl },
   ];
 
   return (
@@ -116,11 +105,13 @@ export const EmailLink = ({
           </DialogHeader>
 
           <div className="grid gap-2 mt-2">
-            {options.map((opt) => (
-              <button
+            {externalOptions.map((opt) => (
+              <a
                 key={opt.label}
-                type="button"
-                onClick={() => openMailOption(opt.url, opt.external)}
+                href={opt.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
                 className="flex items-center justify-between p-3 rounded-lg border border-border hover:bg-secondary transition-colors group text-left"
               >
                 <div>
@@ -128,8 +119,20 @@ export const EmailLink = ({
                   <div className="text-sm text-muted-foreground">{opt.desc}</div>
                 </div>
                 <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
-              </button>
+              </a>
             ))}
+
+            <button
+              type="button"
+              onClick={() => openMailOption(mailtoUrl)}
+              className="flex items-center justify-between p-3 rounded-lg border border-border hover:bg-secondary transition-colors group text-left"
+            >
+              <div>
+                <div className="font-medium text-foreground">Standaard mail-app</div>
+                <div className="text-sm text-muted-foreground">Op uw computer of telefoon</div>
+              </div>
+              <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
+            </button>
 
             <button
               type="button"
