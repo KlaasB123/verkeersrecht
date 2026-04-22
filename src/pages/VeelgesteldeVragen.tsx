@@ -1,12 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Car, Wine, Scale, Coins, ShieldAlert } from "lucide-react";
 import { useEffect } from "react";
 
@@ -22,6 +17,10 @@ const faqCategories = [
       {
         q: "Kan ik een rijverbod vermijden?",
         a: "Dat hangt af van de feiten en uw rijverleden. In sommige gevallen kan de rechter kiezen voor een alternatieve maatregel zoals een alcoholslot, een rijverbod beperkt in de tijd of een opleiding. Een advocaat kan uw dossier zo voorbereiden dat uw kansen op een mildere sanctie maximaal zijn.",
+      },
+      {
+        q: "Wat is een beperkt rijbewijs en kan ik dat aanvragen?",
+        a: "Een beperkt rijbewijs laat u toe te rijden voor specifieke doeleinden, zoals woon-werkverkeer, zelfs tijdens een rijverbod. De rechter kan dit toekennen op vraag van uw advocaat. Het wordt vaker toegekend aan mensen zonder rijverleden en met professionele noodwendigheid.",
       },
       {
         q: "Wat is een beperkt rijbewijs en kan ik dat aanvragen?",
@@ -105,7 +104,7 @@ const VeelgesteldeVragen = () => {
           "@type": "Answer",
           text: item.a,
         },
-      }))
+      })),
     );
 
     const jsonLd = {
@@ -126,9 +125,9 @@ const VeelgesteldeVragen = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Veelgestelde Vragen" 
-        description="Antwoorden op veelgestelde vragen over verkeersrecht in België: rijbewijs, alcohol, procedure, kosten en aansprakelijkheid. Advocatenkantoor Govarts." 
+      <SEO
+        title="Veelgestelde Vragen"
+        description="Antwoorden op veelgestelde vragen over verkeersrecht in België: rijbewijs, alcohol, procedure, kosten en aansprakelijkheid. Advocatenkantoor Govarts."
       />
       <Header />
       <main className="pt-32 pb-20">
@@ -137,9 +136,7 @@ const VeelgesteldeVragen = () => {
             <span className="inline-block text-navy-light font-semibold text-sm uppercase tracking-wider mb-3">
               FAQ
             </span>
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Veelgestelde Vragen
-            </h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Veelgestelde Vragen</h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Hier vindt u antwoorden op de meest voorkomende vragen over verkeersrecht, procedures en kosten.
             </p>
