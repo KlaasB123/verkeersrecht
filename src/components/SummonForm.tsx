@@ -288,10 +288,28 @@ export const SummonForm = () => {
                     Een kopie van uw inzending wordt automatisch naar uw eigen e-mailadres gestuurd ter bevestiging.
                   </p>
 
+                  <div className="flex items-start gap-3 p-4 bg-background rounded-xl border border-border">
+                    <Checkbox
+                      id="privacy"
+                      checked={privacyAccepted}
+                      onCheckedChange={(v) => setPrivacyAccepted(v === true)}
+                      className="mt-1"
+                    />
+                    <Label htmlFor="privacy" className="cursor-pointer font-normal leading-relaxed text-sm">
+                      Ik heb het{" "}
+                      <Link to="/privacybeleid" target="_blank" className="text-primary underline hover:no-underline">
+                        privacybeleid
+                      </Link>{" "}
+                      gelezen en geef toestemming aan Advocatenkantoor Govarts om mijn
+                      gegevens en de eventueel geüploade documenten te verwerken voor de
+                      behandeling van mijn aanvraag. *
+                    </Label>
+                  </div>
+
                   <Button
                     type="submit"
                     size="lg"
-                    disabled={submitting}
+                    disabled={submitting || !privacyAccepted}
                     className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-lg py-6"
                   >
                     {submitting ? (
