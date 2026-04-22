@@ -1,5 +1,5 @@
-import { useState, useRef } from "react";
-import { Upload, Send, Loader2, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
+import { Send, Loader2, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -8,32 +8,10 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 
-const MAX_FILE_BYTES = 10 * 1024 * 1024; // 10 MB
-const ALLOWED_MIME = ["application/pdf", "image/jpeg", "image/png"];
-
 export const SummonForm = () => {
   const [uploadMethod, setUploadMethod] = useState<"upload" | "manual">("upload");
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [file, setFile] = useState<File | null>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const f = e.target.files?.[0] ?? null;
-    if (f) {
-      if (f.size > MAX_FILE_BYTES) {
-        toast({ title: "Bestand te groot", description: "Maximaal 10 MB toegestaan.", variant: "destructive" });
-        e.target.value = "";
-        return;
-      }
-      if (!ALLOWED_MIME.includes(f.type)) {
-        toast({ title: "Ongeldig bestandstype", description: "Enkel PDF, JPG of PNG.", variant: "destructive" });
-        e.target.value = "";
-        return;
-      }
-    }
-    setFile(f);
-  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -66,40 +44,6 @@ export const SummonForm = () => {
     const submissionId = crypto.randomUUID();
 
     try {
-      let documentPath: string | null = null;
-      let signedUrl: string | null = null;
-
-      if (uploadMethod === "upload" && file) {
-        const ext = file.name.split(".").pop()?.toLowerCase() ?? "bin";
-        documentPath = `${submissionId}.${ext}`;
-        const { error: upErr } = await supabase.storage
-          .from("summon-documents")
-          .upload(documentPath, file, { contentType: file.type, upsert: false });
-        if (upErr) throw upErr;
-
-        const { data: signed } = await supabase.storage
-          .from("summon-documents")
-          .createSignedUrl(documentPath, 60 * 60 * 24 * 7);
-        signedUrl = signed?.signedUrl ?? null;
-      }
-
-      const { error: insErr } = await supabase.from("summon_submissions").insert({
-        id: submissionId,
-        name,
-        email,
-        phone,
-        insurance_company: insuranceCompany,
-        policy_number: policyNumber,
-        vehicle_brand: vehicleBrand,
-        license_plate: licensePlate,
-        upload_method: uploadMethod,
-        document_url: documentPath,
-        rolnummer,
-        rechtbank,
-        datum_zitting: datum,
-      });
-      if (insErr) throw insErr;
-
       // Notification to the firm
       await supabase.functions.invoke("send-transactional-email", {
         body: {
@@ -118,7 +62,6 @@ export const SummonForm = () => {
             rechtbank: rechtbank ?? undefined,
             datumZitting: datum ?? undefined,
             uploadMethod,
-            documentUrl: signedUrl ?? undefined,
             submissionId,
           },
         },
@@ -139,7 +82,7 @@ export const SummonForm = () => {
             rolnummer: rolnummer ?? undefined,
             rechtbank: rechtbank ?? undefined,
             datumZitting: datum ?? undefined,
-            hasUpload: !!documentPath,
+            hasUpload: uploadMethod === "upload",
           },
         },
       });
@@ -147,7 +90,6 @@ export const SummonForm = () => {
       setSubmitted(true);
       toast({ title: "Dagvaarding verstuurd", description: "U ontvangt een bevestiging per e-mail." });
       form.reset();
-      setFile(null);
     } catch (err: any) {
       console.error("Submit failed", err);
       toast({
@@ -178,8 +120,8 @@ export const SummonForm = () => {
               </CardTitle>
               <CardDescription className="text-base mt-4 max-w-xl mx-auto">
                 {submitted
-                  ? "Wij hebben uw dagvaarding goed ontvangen. U ontvangt een bevestiging per e-mail. Wij nemen contact met u op."
-                  : "U kan uw dagvaarding doorsturen, dan bent u onmiddellijk geholpen en hoeft u niets meer te ondernemen. Wij nemen zelf contact op met uw verzekeraar."}
+                  ? "Wij hebben uw gegevens goed ontvangen. U ontvangt een bevestiging per e-mail. Heeft u een scan of pdf van de dagvaarding, mail die dan rechtstreeks naar erwin@verkeersrecht.info."
+                  : "U kan uw gegevens doorsturen, dan bent u onmiddellijk geholpen en hoeft u niets meer te ondernemen. Wij nemen zelf contact op met uw verzekeraar."}
               </CardDescription>
             </CardHeader>
 
@@ -246,24 +188,12 @@ export const SummonForm = () => {
                     </RadioGroup>
 
                     {uploadMethod === "upload" && (
-                      <div
-                        className="border-2 border-dashed border-border rounded-xl p-8 text-center hover:border-primary/30 transition-colors cursor-pointer bg-background"
-                        onClick={() => fileInputRef.current?.click()}
-                      >
-                        <Upload className="w-10 h-10 text-muted-foreground mx-auto mb-3" />
-                        <p className="text-muted-foreground mb-2">
-                          {file ? file.name : "Sleep uw bestand hierheen of klik om te uploaden"}
+                      <div className="p-4 bg-background rounded-xl border border-border">
+                        <p className="text-sm text-foreground">
+                          Na het versturen van dit formulier kan u uw scan of pdf rechtstreeks
+                          mailen naar <strong>erwin@verkeersrecht.info</strong>. Vermeld daarbij uw
+                          naam zodat wij het bestand bij uw dossier kunnen voegen.
                         </p>
-                        <p className="text-sm text-muted-foreground">
-                          PDF, JPG of PNG (max 10MB)
-                        </p>
-                        <input
-                          ref={fileInputRef}
-                          type="file"
-                          className="hidden"
-                          accept=".pdf,.jpg,.jpeg,.png"
-                          onChange={handleFileChange}
-                        />
                       </div>
                     )}
 

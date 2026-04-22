@@ -53,8 +53,18 @@ const SummonConfirmationEmail = ({
           {rolnummer ? <Text style={row}><strong>Rolnummer:</strong> {rolnummer}</Text> : null}
           {rechtbank ? <Text style={row}><strong>Politierechtbank:</strong> {rechtbank}</Text> : null}
           {datumZitting ? <Text style={row}><strong>Datum zitting:</strong> {datumZitting}</Text> : null}
-          {hasUpload ? <Text style={row}><strong>Dagvaarding:</strong> als bijlage geüpload</Text> : null}
         </Section>
+
+        {hasUpload ? (
+          <Section style={card}>
+            <Heading as="h2" style={h2}>Uw scan of pdf doorsturen</Heading>
+            <Text style={row}>
+              U gaf aan een scan of pdf van uw dagvaarding te hebben. Mail dit
+              document rechtstreeks naar <strong>erwin@verkeersrecht.info</strong>.
+              Vermeld uw naam in de mail zodat wij het bij uw dossier kunnen voegen.
+            </Text>
+          </Section>
+        ) : null}
 
         <Hr style={hr} />
 
