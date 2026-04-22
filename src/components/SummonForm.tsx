@@ -45,9 +45,11 @@ export const SummonForm = () => {
     const form = e.currentTarget;
     const fd = new FormData(form);
 
-    const name = String(fd.get("name") ?? "").trim();
+    const firstName = String(fd.get("firstName") ?? "").trim();
+    const lastName = String(fd.get("lastName") ?? "").trim();
+    const name = `${firstName} ${lastName}`.trim();
     const email = String(fd.get("email") ?? "").trim();
-    const phone = String(fd.get("phone") ?? "").trim() || null;
+    const phone = String(fd.get("phone") ?? "").trim();
     const insuranceCompany = String(fd.get("insurance") ?? "").trim();
     const policyNumber = String(fd.get("policy") ?? "").trim();
     const vehicleBrand = String(fd.get("vehicle") ?? "").trim();
@@ -56,7 +58,7 @@ export const SummonForm = () => {
     const rechtbank = String(fd.get("rechtbank") ?? "").trim() || null;
     const datum = String(fd.get("datum") ?? "").trim() || null;
 
-    if (!name || !email || !insuranceCompany || !policyNumber || !vehicleBrand || !licensePlate) {
+    if (!firstName || !lastName || !email || !phone || !insuranceCompany || !policyNumber || !vehicleBrand || !licensePlate) {
       toast({ title: "Vul alle verplichte velden in", variant: "destructive" });
       return;
     }
@@ -102,7 +104,7 @@ export const SummonForm = () => {
           templateData: {
             name,
             email,
-            phone: phone ?? undefined,
+            phone,
             insuranceCompany,
             policyNumber,
             vehicleBrand,
@@ -182,18 +184,24 @@ export const SummonForm = () => {
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Naam *</Label>
-                      <Input id="name" name="name" placeholder="Uw volledige naam" required />
+                      <Label htmlFor="firstName">Voornaam *</Label>
+                      <Input id="firstName" name="firstName" placeholder="Voornaam" required />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Telefoon</Label>
-                      <Input id="phone" name="phone" type="tel" placeholder="+32 ..." />
+                      <Label htmlFor="lastName">Naam *</Label>
+                      <Input id="lastName" name="lastName" placeholder="Achternaam" required />
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="email">E-mail *</Label>
-                    <Input id="email" name="email" type="email" placeholder="uw@email.be" required />
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="email">E-mail *</Label>
+                      <Input id="email" name="email" type="email" placeholder="uw@email.be" required />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">Telefoon *</Label>
+                      <Input id="phone" name="phone" type="tel" placeholder="+32 ..." required />
+                    </div>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-4">
