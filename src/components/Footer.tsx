@@ -112,8 +112,13 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 mt-12 pt-8 text-center text-primary-foreground/50 text-sm">
+        <div className="border-t border-primary-foreground/10 mt-12 pt-8 text-center text-primary-foreground/50 text-sm space-y-2">
           <p>© {new Date().getFullYear()} Advocatenkantoor Govarts BV • BTW BE 0837.325.675</p>
+          <p>
+            <Link to="/privacybeleid" className="hover:text-primary-foreground transition-colors underline">
+              Privacybeleid
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
