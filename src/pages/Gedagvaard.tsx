@@ -29,7 +29,7 @@ const Gedagvaard = () => {
       </p>
 
       <p className="mb-6">
-        Wij worden volledig door de verzekering betaald en kosten u dus niets. De makelaar zal aangifte doen bij de verzekeringsmaatschappij, die ons dan zal verwittigen. U kan ons ook altijd rechtstreeks contacteren, dan doen wij zelf de aangifte. In dat geval is het belangrijk dat u ons de dagvaarding en uw polisnummer van de verzekering alsook de nummerplaat van uw wagen bezorgd.
+        Wij worden volledig door de verzekering betaald en kosten u dus niets. De makelaar zal aangifte doen bij de verzekeringsmaatschappij, die ons dan zal verwittigen. U kan ons ook altijd rechtstreeks contacteren, dan doen wij zelf de aangifte. In dat geval is het belangrijk dat u ons de dagvaarding en uw polisnummer van de verzekering alsook de nummerplaat van uw wagen bezorgt.
       </p>
 
       <p className="mb-6">
