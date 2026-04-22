@@ -21,7 +21,7 @@ const Gedagvaard = () => {
       </p>
 
       <p className="mb-6">
-        Hebt u een dagvaarding ontvangen, kan u uw makelaar contacteren met de vraag of u een rechtsbijstandsverzekering hebt afgesloten. In de meeste gevallen is dat zo. U kan dan zelf uw eigen advocaat kiezen. U kunt dus altijd ons kantoor laten aanstellen.
+        Hebt u een dagvaarding ontvangen, dan kan u uw makelaar contacteren met de vraag of u een rechtsbijstandsverzekering hebt afgesloten. In de meeste gevallen is dat zo. U kan dan zelf uw eigen advocaat kiezen. U kunt dus altijd ons kantoor laten aanstellen.
       </p>
 
       <p className="mb-6">
