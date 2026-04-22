@@ -1,9 +1,11 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import { Upload, Send, Loader2, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
@@ -16,6 +18,7 @@ export const SummonForm = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [file, setFile] = useState<File | null>(null);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -59,6 +62,14 @@ export const SummonForm = () => {
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       toast({ title: "Ongeldig e-mailadres", variant: "destructive" });
+      return;
+    }
+    if (!privacyAccepted) {
+      toast({
+        title: "Akkoord vereist",
+        description: "Gelieve het privacybeleid te aanvaarden om verder te gaan.",
+        variant: "destructive",
+      });
       return;
     }
 
@@ -130,6 +141,7 @@ export const SummonForm = () => {
       toast({ title: "Dagvaarding verstuurd", description: "U ontvangt een bevestiging per e-mail." });
       form.reset();
       setFile(null);
+      setPrivacyAccepted(false);
     } catch (err: any) {
       console.error("Submit failed", err);
       toast({
@@ -276,10 +288,28 @@ export const SummonForm = () => {
                     Een kopie van uw inzending wordt automatisch naar uw eigen e-mailadres gestuurd ter bevestiging.
                   </p>
 
+                  <div className="flex items-start gap-3 p-4 bg-background rounded-xl border border-border">
+                    <Checkbox
+                      id="privacy"
+                      checked={privacyAccepted}
+                      onCheckedChange={(v) => setPrivacyAccepted(v === true)}
+                      className="mt-1"
+                    />
+                    <Label htmlFor="privacy" className="cursor-pointer font-normal leading-relaxed text-sm">
+                      Ik heb het{" "}
+                      <Link to="/privacybeleid" target="_blank" className="text-primary underline hover:no-underline">
+                        privacybeleid
+                      </Link>{" "}
+                      gelezen en geef toestemming aan Advocatenkantoor Govarts om mijn
+                      gegevens en de eventueel geüploade documenten te verwerken voor de
+                      behandeling van mijn aanvraag. *
+                    </Label>
+                  </div>
+
                   <Button
                     type="submit"
                     size="lg"
-                    disabled={submitting}
+                    disabled={submitting || !privacyAccepted}
                     className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-lg py-6"
                   >
                     {submitting ? (
