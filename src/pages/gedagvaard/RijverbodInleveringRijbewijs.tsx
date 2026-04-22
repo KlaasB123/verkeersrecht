@@ -40,7 +40,7 @@ const RijverbodInleveringRijbewijs = () => {
       </p>
 
       <p className="mb-6">
-        De griffie zal zeggen wanneer u het rijbewijs terug kunt afhalen. Dit wordt u niet opgestuurd, dus hou daar rekening mee. Wel kan u het door iemand anders met een volmacht laten afhalen. Deze volmacht wordt door u ondertekend en de naam vandiegene die het rijbewijs in uw plaats gaat afhalen, dient u te vermelden.
+        De griffie zal zeggen wanneer u het rijbewijs terug kunt afhalen. Dit wordt u niet opgestuurd, dus hou daar rekening mee. Wel kan u het door iemand anders met een volmacht laten afhalen. Deze volmacht wordt door u ondertekend en de naam van diegene die het rijbewijs in uw plaats gaat afhalen, dient u te vermelden.
       </p>
 
       <p className="mb-6">

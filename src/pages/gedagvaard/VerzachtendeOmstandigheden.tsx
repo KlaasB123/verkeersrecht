@@ -16,7 +16,7 @@ const VerzachtendeOmstandigheden = () => {
   return (
     <ServicePageLayout title="Verzachtende omstandigheden" icon={FileWarning} subLinks={subLinks}>
       <p className="text-lg leading-relaxed mb-6">
-        Verzachtende omstandigheden zijn bepaalde door ons aan te halen argumenten die ervoor zorgen dat de Rechtbank u lager zal bestraffen. Zonder verzachtende omstandigheden zou u m.a.w een hoger straf krijgen.
+        Verzachtende omstandigheden zijn bepaalde door ons aan te halen argumenten die ervoor zorgen dat de Rechtbank u lager zal bestraffen. Zonder verzachtende omstandigheden zou u m.a.w. een hogere straf krijgen.
       </p>
 
       <p className="mb-6">
