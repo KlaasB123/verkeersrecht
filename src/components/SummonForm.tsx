@@ -18,6 +18,7 @@ export const SummonForm = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [file, setFile] = useState<File | null>(null);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -61,6 +62,14 @@ export const SummonForm = () => {
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       toast({ title: "Ongeldig e-mailadres", variant: "destructive" });
+      return;
+    }
+    if (!privacyAccepted) {
+      toast({
+        title: "Akkoord vereist",
+        description: "Gelieve het privacybeleid te aanvaarden om verder te gaan.",
+        variant: "destructive",
+      });
       return;
     }
 
@@ -132,6 +141,7 @@ export const SummonForm = () => {
       toast({ title: "Dagvaarding verstuurd", description: "U ontvangt een bevestiging per e-mail." });
       form.reset();
       setFile(null);
+      setPrivacyAccepted(false);
     } catch (err: any) {
       console.error("Submit failed", err);
       toast({
