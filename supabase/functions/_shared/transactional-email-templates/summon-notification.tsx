@@ -67,12 +67,14 @@ const SummonNotificationEmail = ({
           {uploadMethod ? <Text style={row}><strong>Methode:</strong> {uploadMethod}</Text> : null}
         </Section>
 
-        {uploadMethod === 'upload' ? (
+        {documentUrl ? (
           <Section style={card}>
-            <Heading as="h2" style={h2}>Dagvaarding (scan/pdf)</Heading>
+            <Heading as="h2" style={h2}>Geüploade dagvaarding</Heading>
             <Text style={row}>
-              De indiener werd gevraagd de scan of pdf rechtstreeks naar
-              erwin@verkeersrecht.info te mailen.
+              <Link href={documentUrl} style={link}>Document downloaden</Link>
+            </Text>
+            <Text style={{ ...row, fontSize: '12px', color: '#666' }}>
+              Link is 7 dagen geldig.
             </Text>
           </Section>
         ) : null}
