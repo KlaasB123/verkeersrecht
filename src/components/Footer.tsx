@@ -18,7 +18,7 @@ export const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground" id="contact">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-4 gap-12 items-end">
+        <div className="grid md:grid-cols-4 gap-12 items-start">
           <div className="flex flex-col">
             <div className="flex justify-center mb-4">
               <Link to="/">
