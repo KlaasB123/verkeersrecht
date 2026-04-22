@@ -12,7 +12,7 @@ const services = [
   {
     image: gedagvaardImg,
     title: "Gedagvaard?",
-    description: "Ontvangen u een dagvaarding voor de politierechtbank? Wij staan u bij.",
+    description: "Ontving u een dagvaarding voor de politierechtbank? Wij staan u bij.",
     href: "/gedagvaard",
   },
   {
