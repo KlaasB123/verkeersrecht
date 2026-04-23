@@ -26,7 +26,7 @@ export const Footer = () => {
               </Link>
             </div>
             <p className="text-primary-foreground/70 leading-relaxed">
-              Uw expert in verkeersrecht. Wij helpen u bij verkeersovertredingen en verkeersongevallen in België.
+              Advocaat verkeersrecht in Hasselt. Advocatenkantoor Govarts BV staat u bij in dagvaardingen, verkeersovertredingen en verkeersongevallen in heel België.
             </p>
           </div>
 
