@@ -11,7 +11,7 @@ const subLinks = [
 
 const OngevalGehad = () => {
   return (
-    <ServicePageLayout title="Een ongeval gehad?" icon={Car} subLinks={subLinks} metaDescription="Verkeersongeval gehad? Advocatenkantoor Govarts helpt u bij schadevergoeding, burgerlijke partijstelling en medische expertise. Gratis eerste contact.">
+    <ServicePageLayout title="Een ongeval gehad?" icon={Car} subLinks={subLinks} metaDescription="Verkeersongeval gehad? Advocaat verkeersrecht in Hasselt – Govarts helpt bij schadevergoeding, burgerlijke partijstelling en medische expertise in heel België.">
       <p className="text-lg leading-relaxed mb-6">
         Wanneer u een verkeersongeval heeft gehad en u meent dat u in uw recht bent, is eventuele getuigen zoeken het eerste wat u moet doen. Dezen kunnen dan immers op objectieve wijze uw gelijk aantonen. Maak zoveel mogelijk foto's vanuit de vier hoeken. Trek een foto van de schade aan uw voertuig en dit aan het andere voertuig. Maak ook foto's van de brokstukken, glas, olie, koelvloeistof en remsporen.
       </p>

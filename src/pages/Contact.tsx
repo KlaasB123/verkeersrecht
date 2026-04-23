@@ -6,7 +6,7 @@ import { EmailLink } from "@/components/EmailLink";
 
 const Contact = () => {
   return (
-    <ServicePageLayout title="Contact" icon={Phone} metaDescription="Contacteer Advocatenkantoor Govarts voor al uw vragen over verkeersrecht. Eerste contact is gratis. Bel +32(0) 11 37 15 11 of stuur een e-mail.">
+    <ServicePageLayout title="Contact" icon={Phone} metaDescription="Contacteer Advocatenkantoor Govarts in Hasselt – uw advocaat verkeersrecht in België. Eerste contact gratis. Bel +32(0) 11 37 15 11 of mail erwin@verkeersrecht.info.">
       <div className="not-prose grid lg:grid-cols-3 gap-8">
         {/* Left: Email CTA */}
         <div>
