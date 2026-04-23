@@ -62,9 +62,20 @@ export const SummonForm = () => {
       toast({ title: "Vul alle verplichte velden in", variant: "destructive" });
       return;
     }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      toast({ title: "Ongeldig e-mailadres", variant: "destructive" });
+    // Strict email validation: local@domain.tld (tld minimaal 2 letters, geen spaties of dubbele punten)
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    if (!emailRegex.test(email) || email.includes("..")) {
+      toast({ title: "Ongeldig e-mailadres", description: "Geef een geldig e-mailadres in (bv. naam@domein.be).", variant: "destructive" });
       return;
+    }
+    if (datum) {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const chosen = new Date(datum);
+      if (isNaN(chosen.getTime()) || chosen < today) {
+        toast({ title: "Ongeldige datum", description: "De datum van de zitting kan niet in het verleden liggen.", variant: "destructive" });
+        return;
+      }
     }
     if (!privacyAccepted) {
       toast({
