@@ -305,7 +305,12 @@ export const SummonForm = () => {
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="datum">Datum zitting</Label>
-                          <Input id="datum" name="datum" type="date" />
+                          <Input
+                            id="datum"
+                            name="datum"
+                            type="date"
+                            min={new Date().toISOString().split("T")[0]}
+                          />
                         </div>
                       </div>
                     )}
