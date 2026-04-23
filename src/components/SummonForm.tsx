@@ -207,7 +207,15 @@ export const SummonForm = () => {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="email">E-mail *</Label>
-                      <Input id="email" name="email" type="email" placeholder="uw@email.be" required />
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="uw@email.be"
+                        required
+                        pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}"
+                        title="Geef een geldig e-mailadres in (bv. naam@domein.be)"
+                      />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="phone">Telefoon *</Label>
