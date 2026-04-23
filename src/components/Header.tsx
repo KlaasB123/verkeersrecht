@@ -58,7 +58,15 @@ export const Header = () => {
       <nav className="container mx-auto px-4 py-0">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center -my-4">
-            <img src={symbolenImg} alt="Verkeersrecht symbolen" className="h-28 w-auto" />
+            <img
+              src={symbolenImg}
+              alt="Verkeersrecht symbolen"
+              className="h-28 w-auto"
+              width={351}
+              height={196}
+              fetchPriority="high"
+              decoding="async"
+            />
           </Link>
 
           {/* Desktop navigation */}

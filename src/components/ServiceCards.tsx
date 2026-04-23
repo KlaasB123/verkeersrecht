@@ -67,9 +67,13 @@ export const ServiceCards = () => {
                 className="group cursor-pointer border-border bg-card h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 overflow-hidden"
               >
                 <div className="h-48 overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.title} 
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    width={662}
+                    height={372}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
