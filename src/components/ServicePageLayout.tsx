@@ -1,5 +1,5 @@
 import { ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
@@ -18,11 +18,40 @@ interface ServicePageLayoutProps {
   metaDescription?: string;
 }
 
+const BASE_URL = "https://verkeersrecht.info";
+
 export const ServicePageLayout = ({ title, icon: Icon, children, subLinks, metaDescription }: ServicePageLayoutProps) => {
-  const defaultDescription = `${title} - Advocatenkantoor Govarts, specialist verkeersrecht in België. Meer dan 30 jaar ervaring. Gratis eerste contact.`;
+  const { pathname } = useLocation();
+  const defaultDescription = `${title} – Advocaat verkeersrecht in Hasselt. Advocatenkantoor Govarts staat u bij voor de politierechtbank in heel België. 30+ jaar ervaring, gratis eerste contact.`;
+
+  // Build breadcrumb structured data from URL path
+  const segments = pathname.split("/").filter(Boolean);
+  const breadcrumbItems = [
+    { name: "Home", url: BASE_URL + "/" },
+    ...segments.map((seg, idx) => ({
+      name: idx === segments.length - 1 ? title : seg.replace(/-/g, " ").replace(/^./, (c) => c.toUpperCase()),
+      url: BASE_URL + "/" + segments.slice(0, idx + 1).join("/"),
+    })),
+  ];
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbItems.map((item, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <SEO title={title} description={metaDescription || defaultDescription} />
+      <SEO
+        title={title}
+        description={metaDescription || defaultDescription}
+        structuredData={breadcrumbSchema}
+      />
       <Header />
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4">
