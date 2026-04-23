@@ -17,12 +17,16 @@ export const Hero = () => {
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight animate-fade-up" style={{ animationDelay: "0.1s" }}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4 leading-tight animate-fade-up" style={{ animationDelay: "0.1s" }}>
               UW EXPERT IN VERKEERSRECHT
             </h1>
 
+            <p className="text-primary-foreground/90 text-lg sm:text-xl font-semibold mb-6 animate-fade-up" style={{ animationDelay: "0.15s" }}>
+              Advocaat verkeersrecht in Hasselt – actief in heel België
+            </p>
+
             <p className="text-base sm:text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto lg:mx-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              Wij helpen u bij verkeersovertredingen en verkeersongevallen in België met grote expertise, op een snelle en efficiënte wijze en via een persoonlijke benadering.
+              Als advocatenkantoor in Hasselt helpen wij u bij verkeersovertredingen en verkeersongevallen in België met grote expertise, op een snelle en efficiënte wijze en via een persoonlijke benadering.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: "0.3s" }}>
