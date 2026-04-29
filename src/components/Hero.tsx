@@ -18,7 +18,7 @@ export const Hero = () => {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4 leading-tight animate-fade-up" style={{ animationDelay: "0.1s" }}>
-              UW EXPERT IN VERKEER
+              UW EXPERT IN VERKEERSRECHT
             </h1>
 
             <p className="text-primary-foreground/90 text-lg sm:text-xl font-semibold mb-6 animate-fade-up" style={{ animationDelay: "0.15s" }}>
