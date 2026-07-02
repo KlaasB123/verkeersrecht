@@ -258,6 +258,53 @@ const PrivacyPolicy = () => {
         daar ook een evenwaardig beschermingsniveau genieten.
       </p>
 
+
+      <h2 className="text-2xl font-semibold text-foreground mt-10 mb-4">Cookies</h2>
+      <p className="mb-4 leading-relaxed">
+        Onze website gebruikt cookies en gelijkaardige technologieën. Bij uw
+        eerste bezoek toont onze cookiebanner u drie evenwaardige keuzes:
+        <strong> Alles aanvaarden</strong>, <strong>Alles weigeren</strong> en
+        <strong> Voorkeuren beheren</strong>. Verder surfen geldt niet als
+        toestemming. U kan uw keuze op elk moment aanpassen via de knop
+        hieronder of via "Cookievoorkeuren beheren" in de footer.
+      </p>
+      <div className="mb-6">
+        <Button variant="outline" onClick={openCookiePreferences}>
+          Cookievoorkeuren beheren
+        </Button>
+      </div>
+      <p className="mb-3 leading-relaxed">Wij onderscheiden vier categorieën cookies:</p>
+      <ul className="list-disc pl-6 mb-6 space-y-2">
+        <li>
+          <strong>Strikt noodzakelijke cookies</strong> — onmisbaar voor het
+          basisfunctioneren van de website en het correct versturen van uw
+          formulierinzendingen (bv. sessiestatus, veiligheidsmaatregelen,
+          onthouden van uw cookiekeuze). Deze worden altijd geplaatst en
+          vereisen geen toestemming.
+        </li>
+        <li>
+          <strong>Functionele cookies</strong> — onthouden van voorkeuren zoals
+          taal of ingevulde velden. <em>Momenteel niet in gebruik</em> op deze
+          website.
+        </li>
+        <li>
+          <strong>Analytische cookies</strong> — meten hoe bezoekers de website
+          gebruiken (bv. Google Analytics, Microsoft Clarity, Hotjar).
+          <em> Momenteel niet in gebruik</em> op deze website.
+        </li>
+        <li>
+          <strong>Marketingcookies</strong> — gerichte advertenties en tracking
+          via derde partijen (bv. Google Ads, Meta/Facebook Pixel, LinkedIn
+          Insight Tag, YouTube-embeds, Google Maps-embeds, reCAPTCHA).
+          <em> Momenteel niet in gebruik</em> op deze website.
+        </li>
+      </ul>
+      <p className="mb-8 leading-relaxed">
+        Indien in de toekomst analytische of marketingscripts worden toegevoegd,
+        worden deze pas geladen nadat u hiervoor uitdrukkelijk toestemming heeft
+        gegeven via de cookiebanner of het voorkeurenscherm.
+      </p>
+
       <h2 className="text-2xl font-semibold text-foreground mt-10 mb-4">Updates</h2>
       <p className="mb-4 leading-relaxed">
         Dit privacybeleid kan van tijd tot tijd worden gewijzigd, binnen de
