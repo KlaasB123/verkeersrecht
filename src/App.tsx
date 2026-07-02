@@ -19,6 +19,7 @@ import NotFound from "./pages/NotFound";
 import VeelgesteldeVragen from "./pages/VeelgesteldeVragen";
 import Unsubscribe from "./pages/Unsubscribe";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import { CookieConsentBanner } from "@/components/CookieConsent";
 
 // Gedagvaard sub-pages
 import VoorWelkeRechtbank from "./pages/gedagvaard/VoorWelkeRechtbank";
@@ -111,6 +112,7 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CookieConsentBanner />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

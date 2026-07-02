@@ -1,6 +1,8 @@
 import { Shield } from "lucide-react";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 import { EmailLink } from "@/components/EmailLink";
+import { Button } from "@/components/ui/button";
+import { openCookiePreferences } from "@/components/CookieConsent";
 
 const PrivacyPolicy = () => {
   return (
@@ -160,12 +162,22 @@ const PrivacyPolicy = () => {
         afsluiting van het desbetreffende dossier.
       </p>
       <p className="mb-4 leading-relaxed">
-        Inzendingen via het dagvaardingsformulier worden enkel per e-mail aan
-        ons en aan u bezorgd; bijhorende geüploade documenten worden tijdelijk
-        opgeslagen in een beveiligde omgeving en zijn enkel toegankelijk via een
-        beveiligde downloadlink met een geldigheidsduur van zeven (7) dagen.
-        Daarna kan het document verder verwerkt worden in het cliëntendossier
-        volgens de hierboven vermelde bewaartermijn.
+        Inzendingen via het contactformulier en het dagvaardingsformulier —
+        inclusief gevoelige/gerechtelijke dossiergegevens zoals een dagvaarding,
+        polisnummer of nummerplaat — worden per e-mail aan ons en aan u bezorgd.
+        Geüploade documenten worden tijdelijk opgeslagen in een beveiligde,
+        niet-publieke omgeving en zijn enkel toegankelijk via een beveiligde
+        downloadlink met een geldigheidsduur van zeven (7) dagen. Daarna wordt
+        het document verder verwerkt in het cliëntendossier volgens de hieronder
+        vermelde bewaartermijn.
+      </p>
+      <p className="mb-4 leading-relaxed">
+        <strong>Specifieke bewaartermijn voor inzendingen via de website:</strong>{" "}
+        {/* AANPASBAAR: vul hier de exacte bewaartermijn in die intern wordt bepaald */}
+        <span className="italic text-muted-foreground">
+          [in te vullen door het kantoor — bv. "maximaal 12 maanden na afhandeling van uw aanvraag,
+          tenzij een cliëntendossier wordt geopend"].
+        </span>
       </p>
       <p className="mb-8 leading-relaxed">
         Persoonsgegevens die wij verwerken voor marketingdoeleinden (zoals het
@@ -244,6 +256,53 @@ const PrivacyPolicy = () => {
         partijen met wie wij samenwerken en geven uw persoonsgegevens niet door
         buiten de Europese Economische Ruimte zonder de garantie dat uw gegevens
         daar ook een evenwaardig beschermingsniveau genieten.
+      </p>
+
+
+      <h2 className="text-2xl font-semibold text-foreground mt-10 mb-4">Cookies</h2>
+      <p className="mb-4 leading-relaxed">
+        Onze website gebruikt cookies en gelijkaardige technologieën. Bij uw
+        eerste bezoek toont onze cookiebanner u drie evenwaardige keuzes:
+        <strong> Alles aanvaarden</strong>, <strong>Alles weigeren</strong> en
+        <strong> Voorkeuren beheren</strong>. Verder surfen geldt niet als
+        toestemming. U kan uw keuze op elk moment aanpassen via de knop
+        hieronder of via "Cookievoorkeuren beheren" in de footer.
+      </p>
+      <div className="mb-6">
+        <Button variant="outline" onClick={openCookiePreferences}>
+          Cookievoorkeuren beheren
+        </Button>
+      </div>
+      <p className="mb-3 leading-relaxed">Wij onderscheiden vier categorieën cookies:</p>
+      <ul className="list-disc pl-6 mb-6 space-y-2">
+        <li>
+          <strong>Strikt noodzakelijke cookies</strong> — onmisbaar voor het
+          basisfunctioneren van de website en het correct versturen van uw
+          formulierinzendingen (bv. sessiestatus, veiligheidsmaatregelen,
+          onthouden van uw cookiekeuze). Deze worden altijd geplaatst en
+          vereisen geen toestemming.
+        </li>
+        <li>
+          <strong>Functionele cookies</strong> — onthouden van voorkeuren zoals
+          taal of ingevulde velden. <em>Momenteel niet in gebruik</em> op deze
+          website.
+        </li>
+        <li>
+          <strong>Analytische cookies</strong> — meten hoe bezoekers de website
+          gebruiken (bv. Google Analytics, Microsoft Clarity, Hotjar).
+          <em> Momenteel niet in gebruik</em> op deze website.
+        </li>
+        <li>
+          <strong>Marketingcookies</strong> — gerichte advertenties en tracking
+          via derde partijen (bv. Google Ads, Meta/Facebook Pixel, LinkedIn
+          Insight Tag, YouTube-embeds, Google Maps-embeds, reCAPTCHA).
+          <em> Momenteel niet in gebruik</em> op deze website.
+        </li>
+      </ul>
+      <p className="mb-8 leading-relaxed">
+        Indien in de toekomst analytische of marketingscripts worden toegevoegd,
+        worden deze pas geladen nadat u hiervoor uitdrukkelijk toestemming heeft
+        gegeven via de cookiebanner of het voorkeurenscherm.
       </p>
 
       <h2 className="text-2xl font-semibold text-foreground mt-10 mb-4">Updates</h2>
