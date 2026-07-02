@@ -112,6 +112,7 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CookieConsentBanner />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
