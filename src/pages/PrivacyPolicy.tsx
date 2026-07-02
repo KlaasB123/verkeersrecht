@@ -173,11 +173,7 @@ const PrivacyPolicy = () => {
       </p>
       <p className="mb-4 leading-relaxed">
         <strong>Specifieke bewaartermijn voor inzendingen via de website:</strong>{" "}
-        {/* AANPASBAAR: vul hier de exacte bewaartermijn in die intern wordt bepaald */}
-        <span className="italic text-muted-foreground">
-          [in te vullen door het kantoor — bv. "maximaal 12 maanden na afhandeling van uw aanvraag,
-          tenzij een cliëntendossier wordt geopend"].
-        </span>
+        wanneer uw aanvraag niet leidt tot de opening van een cliëntendossier, bewaren wij uw gegevens en geüploade documenten maximaal twaalf (12) maanden na de afhandeling van uw aanvraag, tenzij een langere bewaring noodzakelijk is in het kader van een wettelijke verplichting, het behandelen of verdedigen van een rechtsvordering, of een concreet geschil. Wanneer uw aanvraag leidt tot de opening van een cliëntendossier, worden uw gegevens verder bewaard overeenkomstig de bewaartermijnen die van toepassing zijn op dat dossier.
       </p>
       <p className="mb-8 leading-relaxed">
         Persoonsgegevens die wij verwerken voor marketingdoeleinden (zoals het
