@@ -162,12 +162,22 @@ const PrivacyPolicy = () => {
         afsluiting van het desbetreffende dossier.
       </p>
       <p className="mb-4 leading-relaxed">
-        Inzendingen via het dagvaardingsformulier worden enkel per e-mail aan
-        ons en aan u bezorgd; bijhorende geüploade documenten worden tijdelijk
-        opgeslagen in een beveiligde omgeving en zijn enkel toegankelijk via een
-        beveiligde downloadlink met een geldigheidsduur van zeven (7) dagen.
-        Daarna kan het document verder verwerkt worden in het cliëntendossier
-        volgens de hierboven vermelde bewaartermijn.
+        Inzendingen via het contactformulier en het dagvaardingsformulier —
+        inclusief gevoelige/gerechtelijke dossiergegevens zoals een dagvaarding,
+        polisnummer of nummerplaat — worden per e-mail aan ons en aan u bezorgd.
+        Geüploade documenten worden tijdelijk opgeslagen in een beveiligde,
+        niet-publieke omgeving en zijn enkel toegankelijk via een beveiligde
+        downloadlink met een geldigheidsduur van zeven (7) dagen. Daarna wordt
+        het document verder verwerkt in het cliëntendossier volgens de hieronder
+        vermelde bewaartermijn.
+      </p>
+      <p className="mb-4 leading-relaxed">
+        <strong>Specifieke bewaartermijn voor inzendingen via de website:</strong>{" "}
+        {/* AANPASBAAR: vul hier de exacte bewaartermijn in die intern wordt bepaald */}
+        <span className="italic text-muted-foreground">
+          [in te vullen door het kantoor — bv. "maximaal 12 maanden na afhandeling van uw aanvraag,
+          tenzij een cliëntendossier wordt geopend"].
+        </span>
       </p>
       <p className="mb-8 leading-relaxed">
         Persoonsgegevens die wij verwerken voor marketingdoeleinden (zoals het
