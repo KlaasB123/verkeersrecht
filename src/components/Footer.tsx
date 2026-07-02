@@ -2,6 +2,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import logoWhite from "@/assets/logo-govarts-white.png";
 import { Link, useNavigate } from "react-router-dom";
 import { EmailLink } from "@/components/EmailLink";
+import { openCookiePreferences } from "@/components/CookieConsent";
 
 export const Footer = () => {
   const navigate = useNavigate();
