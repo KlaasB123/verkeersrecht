@@ -115,10 +115,17 @@ export const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 mt-12 pt-8 text-center text-primary-foreground/50 text-sm space-y-2">
           <p>© {new Date().getFullYear()} Advocatenkantoor Govarts BV • BTW BE 0837.325.675</p>
-          <p>
+          <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
             <Link to="/privacybeleid" className="hover:text-primary-foreground transition-colors underline">
               Privacybeleid
             </Link>
+            <button
+              type="button"
+              onClick={openCookiePreferences}
+              className="hover:text-primary-foreground transition-colors underline"
+            >
+              Cookievoorkeuren beheren
+            </button>
           </p>
         </div>
       </div>
