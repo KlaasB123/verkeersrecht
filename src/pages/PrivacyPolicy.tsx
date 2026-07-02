@@ -1,6 +1,8 @@
 import { Shield } from "lucide-react";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 import { EmailLink } from "@/components/EmailLink";
+import { Button } from "@/components/ui/button";
+import { openCookiePreferences } from "@/components/CookieConsent";
 
 const PrivacyPolicy = () => {
   return (
